@@ -8,6 +8,7 @@ import About from '../components/about';
 import Services from '../components/services';
 import AISoftwareImage from '../assets/img/ai-software.png';
 import WhyUs from '../components/whyUs';
+import { ScrollRestoration } from 'react-router-dom';
 
 const AIPoweredSoftware = () => {
   const { title, subRoute, offersHeading } = strings.AISoftware;
@@ -20,6 +21,7 @@ const AIPoweredSoftware = () => {
       <TechnologiesAndTools />
       <WhyUs />
       <ContactUs />
+      <ScrollRestoration />
     </>
   );
 };

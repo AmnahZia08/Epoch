@@ -128,10 +128,6 @@ Default Button Style
   position: relative;
 }
 
-.default-btn:hover {
-  background-position: right center;
-}
-
 .default-btn i {
   position: absolute;
   right: 25px;
@@ -2241,6 +2237,12 @@ Blog Area CSS
   overflow: hidden;
   display: block;
   cursor: pointer;
+  height: 550px;
+}
+.article-area .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .article-area .item:before {
@@ -2668,7 +2670,7 @@ Contact Area CSS
 }
 
 .form-control {
-  height: 60px;
+  padding: 12px;
   padding-left: 15px;
   border-radius: 0px;
   color: var(--white_color);
@@ -3217,9 +3219,6 @@ Contact Section CSS
 }
 
 .btn-secondary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #6c757d;
   background-image: none;
 }

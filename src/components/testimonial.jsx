@@ -8,6 +8,7 @@ import client_2 from '../assets/img/client-2.png';
 import client_3 from '../assets/img/client-3.png';
 import TestimonialCard from './common/testimonialCard';
 import TeamComponent from './teamComponent';
+import { motion } from 'framer-motion';
 
 const testimonialData = [
   {
@@ -135,63 +136,70 @@ const Testimonial = () => {
   return (
     <div className='testimonial-section ptb-100'>
       <div className='container'>
-        <div className='banner-area no-background text-center pt-0'>
-          <span className='banner-top-title'>Testimonials</span>
-        </div>
-        <h2 className='text-center pb-5 w-50 mx-auto'>
-          What Our Clients Say About Us
-        </h2>
-
-        <TeamComponent
-          parentClass={'pt-0 pb-100'}
-          data={testimonialData}
-          swiperRef={swiperRefs.team}
-        />
-
-        <div className='d-flex align-items-center justify-content-between navigation mt-3'>
-          <div onClick={handleSlidePrev}>
-            <i className='ri-arrow-left-line' />
+        <motion.div
+          className='position-relative'
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          viewport={{ once: true }}
+        >
+          <div className='banner-area no-background text-center pt-0'>
+            <span className='banner-top-title'>Testimonials</span>
           </div>
-          <div onClick={handleSlideNext}>
-            <i className='ri-arrow-right-line' />
-          </div>
-        </div>
+          <h2 className='text-center pb-5 w-50 mx-auto'>
+            What Our Clients Say About Us
+          </h2>
 
-        <div className='testimonial-area ptb-100'>
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
-            loop
-            onBeforeInit={(swiper) => {
-              swiperRefs.testimonial.current = swiper;
-            }}
-            className='image-courser'
-            modules={[Navigation]}
-          >
-            {testimonialData.map(({ id, position, rating, review, name }) => (
-              <SwiperSlide key={id}>
-                <TestimonialCard
-                  position={position}
-                  name={name}
-                  rating={rating}
-                  review={review}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          {testimonialData.map(({ id, img }) => {
-            return (
-              <div key={id} className='user'>
-                <img src={img} alt='image' />
-              </div>
-            );
-          })}
-        </div>
-        <div className='star'></div>
-        <div className='star'></div>
-        <div className='star'></div>
-        <div className='star'></div>
-        <div className='star'></div>
+          <TeamComponent
+            parentClass={'pt-0 pb-100'}
+            data={testimonialData}
+            swiperRef={swiperRefs.team}
+          />
+
+          <div className='d-flex align-items-center justify-content-between navigation mt-3'>
+            <div onClick={handleSlidePrev}>
+              <i className='ri-arrow-left-line' />
+            </div>
+            <div onClick={handleSlideNext}>
+              <i className='ri-arrow-right-line' />
+            </div>
+          </div>
+
+          <div className='testimonial-area ptb-100'>
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              loop
+              onBeforeInit={(swiper) => {
+                swiperRefs.testimonial.current = swiper;
+              }}
+              className='image-courser'
+              modules={[Navigation]}
+            >
+              {testimonialData.map(({ id, position, rating, review, name }) => (
+                <SwiperSlide key={id}>
+                  <TestimonialCard
+                    position={position}
+                    name={name}
+                    rating={rating}
+                    review={review}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            {testimonialData.map(({ id, img }) => {
+              return (
+                <div key={id} className='user'>
+                  <img src={img} alt='image' />
+                </div>
+              );
+            })}
+          </div>
+          <div className='star'></div>
+          <div className='star'></div>
+          <div className='star'></div>
+          <div className='star'></div>
+          <div className='star'></div>
+        </motion.div>
       </div>
     </div>
   );

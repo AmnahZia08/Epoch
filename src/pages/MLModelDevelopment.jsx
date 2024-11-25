@@ -8,6 +8,7 @@ import About from '../components/about';
 import CustomModelImage from '../assets/img/custom-model.png';
 import ContactUs from '../components/contactUs';
 import WhyUs from '../components/whyUs';
+import { ScrollRestoration } from 'react-router-dom';
 
 const MLModelDevelopment = () => {
   const {
@@ -22,6 +23,7 @@ const MLModelDevelopment = () => {
       <TechnologiesAndTools />
       <WhyUs />
       <ContactUs />
+      <ScrollRestoration />
     </>
   );
 };

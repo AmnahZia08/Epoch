@@ -3,6 +3,7 @@ import brand_1 from '../assets/img/brand1.png';
 import brand_2 from '../assets/img/brand2.png';
 import brand_3 from '../assets/img/brand3.png';
 import Marquee from 'react-fast-marquee';
+import { motion } from 'framer-motion';
 
 const brandsData = [
   {
@@ -37,22 +38,29 @@ const Brands = () => {
   return (
     <div className='brands-area ptb-100'>
       <div className='container'>
-        <p>Our Partner By Logo</p>
-        <Marquee
-          autoFill
-          pauseOnHover
-          speed={40}
-          gradient={!isSmallScreen}
-          gradientColor='rgba(0, 6, 16, 1)'
+        <motion.div
+          className='position-relative'
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          viewport={{ once: true }}
         >
-          {brandsData.map(({ id, brand_logo }) => {
-            return (
-              <div key={id} className='me-5'>
-                <img src={brand_logo} alt='image' />
-              </div>
-            );
-          })}
-        </Marquee>
+          <p>Our Partner By Logo</p>
+          <Marquee
+            autoFill
+            pauseOnHover
+            speed={40}
+            gradient={!isSmallScreen}
+            gradientColor='rgba(0, 6, 16, 1)'
+          >
+            {brandsData.map(({ id, brand_logo }) => {
+              return (
+                <div key={id} className='me-5'>
+                  <img src={brand_logo} alt='image' />
+                </div>
+              );
+            })}
+          </Marquee>
+        </motion.div>
       </div>
     </div>
   );

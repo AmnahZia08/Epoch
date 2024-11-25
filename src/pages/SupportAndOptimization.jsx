@@ -8,6 +8,7 @@ import Brands from '../components/brands';
 import TechnologiesAndTools from '../components/technologiesAndTools';
 import ContactUs from '../components/contactUs';
 import SupportImage from '../assets/img/ongoing-support.png';
+import { ScrollRestoration } from 'react-router-dom';
 
 const SupportAndOptimization = () => {
   const { subRoute } = strings.SupportAndOptimization;
@@ -20,6 +21,7 @@ const SupportAndOptimization = () => {
       <TechnologiesAndTools />
       <WhyUs />
       <ContactUs />
+      <ScrollRestoration />
     </>
   );
 };

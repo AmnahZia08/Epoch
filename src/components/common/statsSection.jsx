@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutUs from '../../assets/img/about-us.png';
+import { motion } from 'framer-motion';
 
 const StatsSection = () => {
   const stats = [
@@ -12,19 +13,26 @@ const StatsSection = () => {
   return (
     <div className='stats-area ptb-100'>
       <div className='container'>
-        <div className='image-container'>
-          <div className='image'>
-            <img src={AboutUs} alt='image' />
-          </div>
-        </div>
-        <div className='row text-center pt-5'>
-          {stats.map((stat, index) => (
-            <div key={index} className='col-lg-3 col-md-6 mb-4'>
-              <h6 className='grd-color-1 stat-value'>{stat.value}</h6>
-              <p className='stat-description'>{stat.description}</p>
+        <motion.div
+          className='position-relative'
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          viewport={{ once: true }}
+        >
+          <div className='image-container'>
+            <div className='image'>
+              <img src={AboutUs} alt='image' />
             </div>
-          ))}
-        </div>
+          </div>
+          <div className='row text-center pt-5'>
+            {stats.map((stat, index) => (
+              <div key={index} className='col-lg-3 col-md-6 mb-4'>
+                <h6 className='grd-color-1 stat-value'>{stat.value}</h6>
+                <p className='stat-description'>{stat.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

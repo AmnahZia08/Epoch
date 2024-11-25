@@ -8,6 +8,7 @@ import Brands from '../components/brands';
 import TechnologiesAndTools from '../components/technologiesAndTools';
 import ContactUs from '../components/contactUs';
 import ERPDevelopmentImage from '../assets/img/erp-development.png';
+import { ScrollRestoration } from 'react-router-dom';
 
 const ERPDevelopment = () => {
   const { subRoute } = strings.ERPDevelopment;
@@ -20,6 +21,7 @@ const ERPDevelopment = () => {
       <TechnologiesAndTools />
       <WhyUs />
       <ContactUs />
+      <ScrollRestoration />
     </>
   );
 };

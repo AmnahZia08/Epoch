@@ -33,7 +33,7 @@
     font-size: 18px;
   }
   .default-btn {
-    padding: 13px 42px 13px 20px;
+    padding: 13px 20px 13px 20px;
     font-size: 16px;
   }
   .default-btn i {
@@ -711,6 +711,9 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+  .navbar .navbar-nav .nav-item:last-child:hover {
+    width: 160px;
+}
 }
 /* Min width 1750px */
 @media only screen and (min-width: 1750px) {
