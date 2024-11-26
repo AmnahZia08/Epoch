@@ -9,6 +9,9 @@ const WhyUsSlider = ({ data }) => {
     swiperRef.current?.slideNext();
   };
 
+  const style =
+    window.innerWidth > 768 ? { gridTemplateColumns: 'auto 1fr 2fr 50px' } : {};
+
   return (
     <Swiper
       spaceBetween={30}
@@ -24,21 +27,18 @@ const WhyUsSlider = ({ data }) => {
         <SwiperSlide key={index}>
           <div
             className='section-container gap-4 d-grid align-items-center'
-            style={{
-              gridTemplateColumns: 'auto 1fr 2fr 50px',
-            }}
+            style={style}
           >
             <img src={image} alt={title} className='icon-image' />
-
             <h3 className='title'>{title}</h3>
 
             <p className='description'>{description}</p>
 
             <button
-              className='btn-outline-light rounded-circle arrow-btn'
+              className='rounded-circle arrow-btn'
               onClick={handleSlideNext}
             >
-              <span className='arrow-icon'>&gt;</span>
+              <span>&gt;</span>
             </button>
           </div>
         </SwiperSlide>

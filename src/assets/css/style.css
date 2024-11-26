@@ -3467,15 +3467,13 @@ Contact Section CSS
 
 .description {
   font-size: 20px;
+  margin-bottom: 0px;
 }
 
 .arrow-btn {
   width: 40px;
   height: 40px;
   border: 1px solid white;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
@@ -3483,6 +3481,7 @@ Contact Section CSS
   background-color: inherit;
   color: white;
   position: relative;
+  margin: auto;
 }
 
 /* .section-container:hover .arrow-btn::after {

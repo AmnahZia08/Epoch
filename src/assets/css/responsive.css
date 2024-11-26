@@ -530,6 +530,18 @@
   .section-container {
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    text-align: center;
+  }
+  .section-container .title {
+    font-size: 20px;
+  }
+  .section-container .description {
+    font-size: 17px;
+  }
+  .section-gradient,
+  .moving-gradient {
+    display: none;
   }
 }
 
@@ -792,9 +804,37 @@
   .strategies-area h2 {
     font-size: 40px;
   }
+
+  .moving-gradient {
+    top: -50px;
+    width: 200px;
+    height: 200px;
+    animation: move-gradient-across 15s linear infinite alternate;
+  }
+
+  @keyframes move-gradient-across {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(100vw - 200px));
+    }
+  }
+
+  .section-gradient {
+    display: none;
+  }
   .section-container {
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    text-align: center;
+  }
+  .section-container .title {
+    font-size: 20px;
+  }
+  .section-container .description {
+    font-size: 17px;
   }
 }
 /* Min width 992px to Max width 1199px */

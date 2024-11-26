@@ -57,7 +57,7 @@ const About = ({
           </div>
           <div className='col-lg-6'>
             <div
-              className={`content ${showButton ? '' : 'vh-100 d-flex flex-column justify-content-around'}`}
+              className={`content ${showButton ? '' : ' d-flex flex-column justify-content-around'}`}
             >
               <div>
                 <div className='banner-area no-background pt-0'>
@@ -66,7 +66,9 @@ const About = ({
                   </span>
                 </div>
 
-                <h2>{heading || staticText.heading}</h2>
+                <h2 className={`${showButton ? '' : 'mb-5'}`}>
+                  {heading || staticText.heading}
+                </h2>
               </div>
               <p>{description || staticText.desc}</p>
               {showButton ? (
