@@ -1,0 +1,35 @@
+{
+    "appName": "Epoch AI",
+    "getStarted": "Get Started",
+    "pageHeaderTitle": "Tailored custom solutions  to drive your business forward",
+    "pageHeaderDesc": "Get the most out of your data with our custom models designed to meet your specific business needs.",
+    "aboutUs": {
+        "title": "About Us",
+        "desc": "Our primary objective consistently revolves around identifying and collaborating with the most exceptional individuals. Our standards are set remarkably high, and it's evident that you're poised and prepared to embrace this formidable opportunity and rise to the challenge.",
+        "imageCard": {
+            "subHeading": "About Us",
+            "heading": "Leading the Future with AI-Powered Solutions",
+            "desc": "At Epoch, we specialize in creating innovative software solutions powered by artificial intelligence. Our mission is to empower businesses by leveraging AI to drive efficiency, foster innovation, and provide a competitive edge in the market. From AI-driven analytics to automated workflows, our solutions are designed to meet the unique needs of each client."
+        }
+    },
+    "MLModelDevelopment": {
+        "subRoute": "Custom Model Development"
+    },
+    "AISoftware": {
+        "subRoute": "Expert AI Solution",
+        "title": "Transform your business with AI - powered software"
+    },
+    "ERPDevelopment": {
+        "subRoute": "Custom Model Development"
+    },
+    "contactUs": {
+        "title": "Contact Us",
+        "desc": "Explore the various interesting content that we present"
+    },
+    "footer": {
+        "querySection": {
+            "title": "Do you have any questions?",
+            "desc": "Feel free to send us your questions or request a free consultation."
+        }
+    }
+}

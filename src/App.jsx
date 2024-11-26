@@ -15,15 +15,15 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <Fetuses />
-      <About />
+      {/* <Fetuses /> */}
+      <About direction='ltr' showButton />
       <Brands />
       <TeamComponent />
       <Testimonial />
       <BlogsComponent />
-      <ScrollRestoration/>
+      <ScrollRestoration />
     </>
-  )
+  );
 }
 
 export default Home

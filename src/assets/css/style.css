@@ -37,18 +37,18 @@ This files table contents are outlined below>>>>>
 /*================================================
 Default CSS
 =================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 
 :root {
   --main_color: #7f00ff;
   --content_color: #9094a6;
   --white_color: #fff;
   --font-size: 17px;
-  --transition: .4s;
+  --transition: 0.4s;
 }
 
 .grd-color-1 {
-  background-image: linear-gradient(315deg, #7F00FF 35%, #E100FF 50%);
+  background-image: linear-gradient(315deg, #7f00ff 35%, #e100ff 50%);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -69,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--white_color);
 }
 
@@ -77,7 +77,7 @@ body {
   background: #050913;
   color: var(--content_color);
   font-size: var(--font-size);
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .ptb-100 {
@@ -117,11 +117,11 @@ Default Button Style
   border-radius: 5px;
   margin: 10px;
   border: none;
-  padding: 15px 55px 15px 40px;
+  padding: 15px 40px;
   background-size: 200% auto;
   font-weight: 500;
   font-size: var(--font-size);
-  background-image: linear-gradient(to right, #7F00FF 0%, #E100FF 50%, #7F00FF 100%);
+  background-image: linear-gradient(to right, #e100ff 0%, #7f00ff 50%);
   transition: var(--transition);
   position: relative;
 }
@@ -164,7 +164,9 @@ Default Button Style
   height: 0;
   border-radius: 50%;
   background-color: var(--white_color);
-  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  transition:
+    width 0.5s ease-in-out,
+    height 0.5s ease-in-out;
   /* transition: top 0.3s ease, left 0.3s ease; */
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -240,25 +242,29 @@ Navbar Area Style
 
 .navbar .navbar-nav {
   margin-left: auto;
-  margin-right: auto;
 }
-
+.navbar img {
+  width: 80px;
+  height: auto;
+}
 .navbar .navbar-nav .nav-item {
+  width: 160px;
   position: relative;
-  margin-left: 17px;
-  margin-right: 17px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.51);
+  text-align: center;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-  color: var(--content_color);
+  color: var(--white_color);
   position: relative;
   transition: var(--transition);
   font-weight: 500;
   font-size: var(--font-size);
   padding-left: 0;
   padding-right: 0;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover,
@@ -268,6 +274,8 @@ Navbar Area Style
 
 .navbar .navbar-nav .nav-item:last-child {
   margin-right: 0;
+  background-color: var(--main_color);
+  border: none;
 }
 
 .navbar .navbar-nav .nav-item:first-child {
@@ -296,7 +304,7 @@ Navbar Area Style
   width: 270px;
   margin-top: 0;
   display: block;
-  padding: 12px 0;
+  padding: 12px;
   border-radius: 4px;
   position: absolute;
   visibility: hidden;
@@ -321,13 +329,23 @@ Navbar Area Style
   color: var(--white_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle::before {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link.dropdown-toggle::before {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle::after {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link.dropdown-toggle::after {
   display: none;
 }
 
@@ -340,16 +358,44 @@ Navbar Area Style
   transform: translate3d(0, 18px, 0);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link {
   color: var(--content_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active,
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link.active,
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link:hover {
   color: var(--white_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu {
   top: 0;
   opacity: 0;
   left: -100%;
@@ -357,16 +403,52 @@ Navbar Area Style
   transform: translate3d(0, 18px, 0);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link {
   color: var(--content_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active,
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link.active,
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link:hover {
   color: var(--white_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu {
   top: 0;
   opacity: 0;
   left: 100%;
@@ -374,39 +456,126 @@ Navbar Area Style
   transform: translate3d(0, 18px, 0);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link {
   color: var(--content_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active,
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link.active,
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link:hover {
   color: var(--white_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item.active
+  .nav-link {
   color: var(--white_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item:hover .dropdown-menu {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item:hover
+  .dropdown-menu {
   opacity: 1;
   visibility: visible;
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item.active
+  .nav-link {
   color: var(--whiteColor);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item:hover .dropdown-menu {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item:hover
+  .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translate3d(0, 0, 0);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item.active
+  .nav-link {
   color: var(--white_color);
 }
 
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item:hover .dropdown-menu {
+.navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .dropdown-menu
+  .nav-item:hover
+  .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translate3d(0, 0, 0);
@@ -571,6 +740,9 @@ Responsive Navbar CSS
 .responsive-navbar .offcanvas-header {
   padding: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .responsive-navbar .offcanvas-header .close-btn {
@@ -608,15 +780,18 @@ Responsive Navbar CSS
   width: 100%;
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list:after {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .responsive-menu-list:after {
   top: 50%;
   right: 0;
-  content: "\ea4e";
+  content: '\ea4e';
   color: var(--content_color);
   position: absolute;
   transform: translateY(-50%);
   transition: var(--transition);
-  font-family: "remixicon";
+  font-family: 'remixicon';
   font-size: 18px;
 }
 
@@ -630,26 +805,51 @@ Responsive Navbar CSS
   font-weight: 500;
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list a:hover,
-.responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list a.activeDropdown {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .responsive-menu-list
+  a:hover,
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .responsive-menu-list
+  a.activeDropdown {
   color: var(--white_color);
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list .responsive-menu-items {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .responsive-menu-list
+  .responsive-menu-items {
   height: 0;
   overflow: hidden;
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list .responsive-menu-items a {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .responsive-menu-list
+  .responsive-menu-items
+  a {
   padding: 0 15px;
   font-size: 15px;
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list .responsive-menu-items a:hover {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .responsive-menu-list
+  .responsive-menu-items
+  a:hover {
   color: var(--white_color);
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list.without-icon:after {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .responsive-menu-list.without-icon:after {
   display: none;
 }
 
@@ -657,7 +857,11 @@ Responsive Navbar CSS
   transform: translateY(-50%) rotate(180deg);
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .activeDropdown>.responsive-menu-items {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .activeDropdown
+  > .responsive-menu-items {
   transition: all 200ms;
   display: block;
   height: auto;
@@ -667,11 +871,16 @@ Responsive Navbar CSS
   padding: 0;
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .activeDropdown>.responsive-menu-items li {
+.responsive-navbar
+  .offcanvas-body
+  ul.responsive-menu
+  .activeDropdown
+  > .responsive-menu-items
+  li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.responsive-navbar .offcanvas-body ul.responsive-menu .activeDropdown>a {
+.responsive-navbar .offcanvas-body ul.responsive-menu .activeDropdown > a {
   color: var(--white_color);
 }
 
@@ -687,7 +896,6 @@ Responsive Navbar CSS
 .comment-list {
   position: relative;
 }
-
 
 /*================================================
 Blog Details CSS
@@ -1155,7 +1363,6 @@ blockquote::after,
   padding-bottom: 0;
 }
 
-
 /*================================================
 Banner Area CSS
 =================================================*/
@@ -1178,13 +1385,23 @@ Banner Area CSS
 }
 
 .banner-area span.banner-top-title {
-  background-color: rgba(127, 12, 255, 0.3215686275);
   padding: 5px 20px;
   border-radius: 5px;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 20px;
+  font-size: 18px;
+  color: var(--white_color);
   display: inline-block;
+  position: relative;
+}
+
+.banner-area span.banner-top-title::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background-color: var(--white_color);
 }
 
 .banner-area .content h1 {
@@ -1209,7 +1426,7 @@ Banner Area CSS
 
 .banner-area .scroll-down {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   right: 0;
   text-align: center;
@@ -1226,7 +1443,7 @@ Banner Area CSS
 }
 
 .banner-area .scroll-down .mouse::before {
-  content: "";
+  content: '';
   width: 5px;
   height: 5px;
   position: absolute;
@@ -1261,7 +1478,7 @@ Banner Area CSS
   border-radius: 5px;
 }
 
-.banner-area .searchbox [class*=col-] {
+.banner-area .searchbox [class*='col-'] {
   padding: 0px;
 }
 
@@ -1317,58 +1534,24 @@ Banner Area CSS
 }
 
 .section-banner {
-  background-image: url(../img/section-bg-2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 200px;
-  padding-bottom: 100px;
-  position: relative;
-}
-
-.section-banner:before {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), #000000 145%);
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  transition: var(--transition);
-}
-
-.section-banner .section-banner-title {
-  z-index: 0;
-  position: relative;
-}
-
-.section-banner .section-banner-title::before {
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 2px;
-  background-color: var(--main_color);
-  top: -45%;
+  padding-top: 20rem;
+  padding-bottom: 14rem;
+  margin: auto;
+  height: 100vh;
 }
 
 .section-banner h1 {
-  font-size: 42px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 82px;
   font-weight: 700;
-  margin-bottom: 20px;
+}
+.section-banner p {
+  font-size: 20px;
+  color: #656c7b;
 }
 
-.section-banner .breadcrumb .breadcrumb-item a {
-  color: var(--white_color);
-}
-
-.section-banner .breadcrumb-item+.breadcrumb-item::before {
-  color: var(--paragraphColor);
-  content: var(--bs-breadcrumb-divider, "/");
-}
-
-.section-banner .breadcrumb-item.active {
-  color: var(--paragraphColor);
+.section-banner .cta {
+  display: flex;
 }
 
 /*================================================
@@ -1396,7 +1579,7 @@ Fetuses Area CSS
 }
 
 .fetuses-area .single-fetuses-box:hover .icon i {
-  background-image: linear-gradient(315deg, #7F00FF 35%, #E100FF 50%);
+  background-image: linear-gradient(315deg, #7f00ff 35%, #e100ff 50%);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -1431,7 +1614,7 @@ Fetuses Area CSS
 }
 
 .fetuses-area .single-fetuses-box a::before {
-  content: "";
+  content: '';
   width: 0;
   height: 1px;
   background: var(--white_color);
@@ -1479,7 +1662,12 @@ Section Title CSS
   padding: 1em 3em;
   background-size: 200% auto;
   font-weight: 500;
-  background-image: linear-gradient(to right, #7F00FF 0%, #E100FF 50%, #7F00FF 100%);
+  background-image: linear-gradient(
+    to right,
+    #7f00ff 0%,
+    #e100ff 50%,
+    #7f00ff 100%
+  );
   transition: var(--transition);
 }
 
@@ -1512,7 +1700,7 @@ Team Area CSS
 .team-area .image-item::before {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000000 130%);
   position: absolute;
-  content: "";
+  content: '';
   top: 0px;
   right: 0;
   bottom: 0;
@@ -1524,7 +1712,7 @@ Team Area CSS
 
 .team-area .image-item .hover-content {
   position: absolute;
-  content: "";
+  content: '';
   bottom: -5px;
   left: 30px;
   transition: var(--transition);
@@ -1536,7 +1724,7 @@ Team Area CSS
 }
 
 .team-area .image-item .hover-content h4::before {
-  content: "";
+  content: '';
   width: 0;
   height: 1px;
   background: var(--white_color);
@@ -1603,22 +1791,27 @@ Team Area CSS
   font-size: 70px;
 }
 
-
 /*================================================
 Brands Area CSS
 =================================================*/
-.brands-area {
-  background-color: #1b1b1b;
+.brands-area p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 25.5px;
+  text-align: center;
+  color: var(--white_color);
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }
 
 .brands-area img {
   cursor: pointer;
-  -webkit-filter: grayscale(1);
+  object-fit: cover;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
 .brands-area img:hover {
-  -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.01);
 }
 
@@ -1657,7 +1850,7 @@ About Area CSS
 
 .about-area .sub-content::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 8px;
   height: 8px;
   width: 8px;
@@ -1739,7 +1932,7 @@ Pricing Area CSS
 }
 
 .pricing-area .cta_btn {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -1817,7 +2010,7 @@ Gallery Area CSS
 .gallery-area .gallery-btn::before {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #050913 45%);
   position: absolute;
-  content: "";
+  content: '';
   top: -150px;
   right: 0;
   bottom: 0;
@@ -1859,7 +2052,7 @@ Testimonial Area CSS
 
 .testimonial-area .user {
   position: absolute;
-  content: "";
+  content: '';
 }
 
 .testimonial-area .user img {
@@ -1915,7 +2108,7 @@ Testimonial Area CSS
 
 .testimonial-area .star {
   position: absolute;
-  content: "";
+  content: '';
   width: 1px;
   height: 8px;
   background-color: var(--white_color);
@@ -1964,7 +2157,7 @@ Testimonial Area CSS
   }
 }
 
-.testimonial-area .owl-theme .owl-nav [class*=owl-]:hover {
+.testimonial-area .owl-theme .owl-nav [class*='owl-']:hover {
   background: initial;
   color: var(--white_color);
   text-decoration: none;
@@ -2017,7 +2210,7 @@ Blog Area CSS
 
 .blog-sidebar .recent_post_widget .post-item::after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: -30px;
   width: 100%;
   height: 1px;
@@ -2051,7 +2244,7 @@ Blog Area CSS
 
 .blog-sidebar .recent_post_widget .post-item .info ul li::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 5px;
   height: 5px;
   left: -18px;
@@ -2074,7 +2267,11 @@ Blog Area CSS
   color: var(--white_color);
   position: relative;
   display: inline;
-  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-image: linear-gradient(
+    to right,
+    currentColor 0%,
+    currentColor 100%
+  );
   background-size: 0px 2px;
   background-position: 0px 95%;
   transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
@@ -2125,7 +2322,7 @@ Blog Area CSS
 .article-area .item:before {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000000 130%);
   position: absolute;
-  content: "";
+  content: '';
   top: 0px;
   right: 0;
   bottom: 0;
@@ -2145,7 +2342,7 @@ Blog Area CSS
 
 .article-area .item .pop-content {
   position: absolute;
-  content: "";
+  content: '';
   bottom: 0;
   left: 20px;
   z-index: 2;
@@ -2157,7 +2354,11 @@ Blog Area CSS
   color: var(--white_color);
   position: relative;
   display: inline;
-  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-image: linear-gradient(
+    to right,
+    currentColor 0%,
+    currentColor 100%
+  );
   background-size: 0px 2px;
   background-position: 0px 95%;
   transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
@@ -2220,7 +2421,7 @@ Blog Area CSS
 }
 
 .article-area .swiper-custom-bullet-active {
-  background-color: #D6D6D6;
+  background-color: #d6d6d6;
 }
 
 /*================================================
@@ -2233,7 +2434,7 @@ Insta Gallery Area CSS
 .insta-gallery .ins-gallery .items:before {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000000 130%);
   position: absolute;
-  content: "";
+  content: '';
   top: -100px;
   right: 0;
   bottom: 0;
@@ -2275,6 +2476,9 @@ Footer Area CSS
   position: relative;
 }
 
+.top-border {
+  border-top: 1px solid #0c1923;
+}
 .footer-area .pr-line {
   background-color: var(--white_color);
 }
@@ -2405,7 +2609,10 @@ Footer Area CSS
   transition: var(--transition);
 }
 
-.footer-area .footer-newsletter-info form .input-newsletter:focus::-moz-placeholder {
+.footer-area
+  .footer-newsletter-info
+  form
+  .input-newsletter:focus::-moz-placeholder {
   color: transparent;
 }
 
@@ -2445,7 +2652,6 @@ Footer Area CSS
 .footer-area .footer-bottom-area {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 30px;
   background-color: var(--footerColor);
 }
 
@@ -2485,14 +2691,19 @@ Footer Area CSS
 }
 
 .footer-area .line::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   height: 15vh;
   width: 100%;
   top: -50%;
   left: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
   animation: drop 7s 0s infinite;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
@@ -2700,7 +2911,7 @@ Comments Area CSS
 }
 
 .comments-area .comment-metadata {
-  margin-bottom: .7em;
+  margin-bottom: 0.7em;
   color: var(--optionalColor);
   letter-spacing: 0.01em;
   font-size: 13px;
@@ -2716,7 +2927,10 @@ Comments Area CSS
   font-size: 22px;
 }
 
-.comments-area .comment-respond .comment-reply-title #cancel-comment-reply-link {
+.comments-area
+  .comment-respond
+  .comment-reply-title
+  #cancel-comment-reply-link {
   display: inline-block;
 }
 
@@ -2742,18 +2956,18 @@ Comments Area CSS
   display: none;
 }
 
-.comments-area .comment-respond input[type="date"],
-.comments-area .comment-respond input[type="time"],
-.comments-area .comment-respond input[type="datetime-local"],
-.comments-area .comment-respond input[type="week"],
-.comments-area .comment-respond input[type="month"],
-.comments-area .comment-respond input[type="text"],
-.comments-area .comment-respond input[type="email"],
-.comments-area .comment-respond input[type="url"],
-.comments-area .comment-respond input[type="password"],
-.comments-area .comment-respond input[type="search"],
-.comments-area .comment-respond input[type="tel"],
-.comments-area .comment-respond input[type="number"],
+.comments-area .comment-respond input[type='date'],
+.comments-area .comment-respond input[type='time'],
+.comments-area .comment-respond input[type='datetime-local'],
+.comments-area .comment-respond input[type='week'],
+.comments-area .comment-respond input[type='month'],
+.comments-area .comment-respond input[type='text'],
+.comments-area .comment-respond input[type='email'],
+.comments-area .comment-respond input[type='url'],
+.comments-area .comment-respond input[type='password'],
+.comments-area .comment-respond input[type='search'],
+.comments-area .comment-respond input[type='tel'],
+.comments-area .comment-respond input[type='number'],
 .comments-area .comment-respond textarea {
   display: block;
   width: 100%;
@@ -2767,134 +2981,186 @@ Comments Area CSS
   background-color: #f5f5f5;
 }
 
-.comments-area .comment-respond input[type="date"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="time"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="datetime-local"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="week"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="month"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="text"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="email"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="url"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="password"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="search"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="tel"]::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="number"]::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='date']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='time']::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='datetime-local']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='week']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='month']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='text']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='email']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='url']::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='password']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='search']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='tel']::-webkit-input-placeholder,
+.comments-area .comment-respond input[type='number']::-webkit-input-placeholder,
 .comments-area .comment-respond textarea::-webkit-input-placeholder {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.comments-area .comment-respond input[type="date"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="time"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="datetime-local"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="week"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="month"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="text"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="email"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="url"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="password"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="search"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="tel"]:-ms-input-placeholder,
-.comments-area .comment-respond input[type="number"]:-ms-input-placeholder,
+.comments-area .comment-respond input[type='date']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='time']:-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='datetime-local']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='week']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='month']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='text']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='email']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='url']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='password']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='search']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='tel']:-ms-input-placeholder,
+.comments-area .comment-respond input[type='number']:-ms-input-placeholder,
 .comments-area .comment-respond textarea:-ms-input-placeholder {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.comments-area .comment-respond input[type="date"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="time"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="datetime-local"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="week"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="month"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="text"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="email"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="url"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="password"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="search"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="tel"]::-ms-input-placeholder,
-.comments-area .comment-respond input[type="number"]::-ms-input-placeholder,
+.comments-area .comment-respond input[type='date']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='time']::-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='datetime-local']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='week']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='month']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='text']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='email']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='url']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='password']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='search']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='tel']::-ms-input-placeholder,
+.comments-area .comment-respond input[type='number']::-ms-input-placeholder,
 .comments-area .comment-respond textarea::-ms-input-placeholder {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.comments-area .comment-respond input[type="date"]::placeholder,
-.comments-area .comment-respond input[type="time"]::placeholder,
-.comments-area .comment-respond input[type="datetime-local"]::placeholder,
-.comments-area .comment-respond input[type="week"]::placeholder,
-.comments-area .comment-respond input[type="month"]::placeholder,
-.comments-area .comment-respond input[type="text"]::placeholder,
-.comments-area .comment-respond input[type="email"]::placeholder,
-.comments-area .comment-respond input[type="url"]::placeholder,
-.comments-area .comment-respond input[type="password"]::placeholder,
-.comments-area .comment-respond input[type="search"]::placeholder,
-.comments-area .comment-respond input[type="tel"]::placeholder,
-.comments-area .comment-respond input[type="number"]::placeholder,
+.comments-area .comment-respond input[type='date']::placeholder,
+.comments-area .comment-respond input[type='time']::placeholder,
+.comments-area .comment-respond input[type='datetime-local']::placeholder,
+.comments-area .comment-respond input[type='week']::placeholder,
+.comments-area .comment-respond input[type='month']::placeholder,
+.comments-area .comment-respond input[type='text']::placeholder,
+.comments-area .comment-respond input[type='email']::placeholder,
+.comments-area .comment-respond input[type='url']::placeholder,
+.comments-area .comment-respond input[type='password']::placeholder,
+.comments-area .comment-respond input[type='search']::placeholder,
+.comments-area .comment-respond input[type='tel']::placeholder,
+.comments-area .comment-respond input[type='number']::placeholder,
 .comments-area .comment-respond textarea::placeholder {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.comments-area .comment-respond input[type="date"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="time"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="datetime-local"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="week"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="month"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="text"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="email"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="url"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="password"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="search"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="tel"]:focus::-webkit-input-placeholder,
-.comments-area .comment-respond input[type="number"]:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='date']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='time']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='datetime-local']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='week']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='month']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='text']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='email']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='url']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='password']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='search']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='tel']:focus::-webkit-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='number']:focus::-webkit-input-placeholder,
 .comments-area .comment-respond textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.comments-area .comment-respond input[type="date"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="time"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="datetime-local"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="week"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="month"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="text"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="email"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="url"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="password"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="search"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="tel"]:focus:-ms-input-placeholder,
-.comments-area .comment-respond input[type="number"]:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='date']:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='time']:focus:-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='datetime-local']:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='week']:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='month']:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='text']:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='email']:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='url']:focus:-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='password']:focus:-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='search']:focus:-ms-input-placeholder,
+.comments-area .comment-respond input[type='tel']:focus:-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='number']:focus:-ms-input-placeholder,
 .comments-area .comment-respond textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.comments-area .comment-respond input[type="date"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="time"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="datetime-local"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="week"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="month"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="text"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="email"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="url"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="password"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="search"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="tel"]:focus::-ms-input-placeholder,
-.comments-area .comment-respond input[type="number"]:focus::-ms-input-placeholder,
+.comments-area .comment-respond input[type='date']:focus::-ms-input-placeholder,
+.comments-area .comment-respond input[type='time']:focus::-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='datetime-local']:focus::-ms-input-placeholder,
+.comments-area .comment-respond input[type='week']:focus::-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='month']:focus::-ms-input-placeholder,
+.comments-area .comment-respond input[type='text']:focus::-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='email']:focus::-ms-input-placeholder,
+.comments-area .comment-respond input[type='url']:focus::-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='password']:focus::-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='search']:focus::-ms-input-placeholder,
+.comments-area .comment-respond input[type='tel']:focus::-ms-input-placeholder,
+.comments-area
+  .comment-respond
+  input[type='number']:focus::-ms-input-placeholder,
 .comments-area .comment-respond textarea:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-.comments-area .comment-respond input[type="date"]:focus::placeholder,
-.comments-area .comment-respond input[type="time"]:focus::placeholder,
-.comments-area .comment-respond input[type="datetime-local"]:focus::placeholder,
-.comments-area .comment-respond input[type="week"]:focus::placeholder,
-.comments-area .comment-respond input[type="month"]:focus::placeholder,
-.comments-area .comment-respond input[type="text"]:focus::placeholder,
-.comments-area .comment-respond input[type="email"]:focus::placeholder,
-.comments-area .comment-respond input[type="url"]:focus::placeholder,
-.comments-area .comment-respond input[type="password"]:focus::placeholder,
-.comments-area .comment-respond input[type="search"]:focus::placeholder,
-.comments-area .comment-respond input[type="tel"]:focus::placeholder,
-.comments-area .comment-respond input[type="number"]:focus::placeholder,
+.comments-area .comment-respond input[type='date']:focus::placeholder,
+.comments-area .comment-respond input[type='time']:focus::placeholder,
+.comments-area .comment-respond input[type='datetime-local']:focus::placeholder,
+.comments-area .comment-respond input[type='week']:focus::placeholder,
+.comments-area .comment-respond input[type='month']:focus::placeholder,
+.comments-area .comment-respond input[type='text']:focus::placeholder,
+.comments-area .comment-respond input[type='email']:focus::placeholder,
+.comments-area .comment-respond input[type='url']:focus::placeholder,
+.comments-area .comment-respond input[type='password']:focus::placeholder,
+.comments-area .comment-respond input[type='search']:focus::placeholder,
+.comments-area .comment-respond input[type='tel']:focus::placeholder,
+.comments-area .comment-respond input[type='number']:focus::placeholder,
 .comments-area .comment-respond textarea:focus::placeholder {
   color: transparent;
 }
@@ -2971,4 +3237,120 @@ Comments Area CSS
 .comments-area .comment-respond .form-submit input:focus {
   color: var(--white_color);
   background-color: var(--optionalColor);
+}
+/*================================================
+Contact Section CSS
+=================================================*/
+
+.btn {
+  font-weight: 500;
+  border-radius: 100px;
+  width: 160px;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--main_color);
+}
+.btn-primary:hover {
+  background-color: var(--main_color);
+  color: var(--white_color);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  background-image: none;
+}
+
+.contact-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 62.4px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+}
+
+.contact-desc {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: left;
+}
+
+.no-resize {
+  resize: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%; 
+  background-size: cover;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.51);
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.28);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.query-section-content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.query-section-title {
+  font-size: 52px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.query-section-desc {
+  font-size: 20px;
+  color: #ccc;
+}
+
+.query-section-input {
+  border-radius: 57px;
+  border: 1px solid #fff;
+  color: var(--white_color);
+  width: 60%;
+}
+
+.query-section-logo {
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.no-background {
+  background-image: none 
+}
+
+/* Stats area */
+.stat-value {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-description {
+  font-size: 20px;
+  color: #656C7B; 
 }
