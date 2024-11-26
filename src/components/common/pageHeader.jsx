@@ -22,7 +22,7 @@ const PageHeader = ({ title, desc, subRoute = '' }) => {
           <Link to='/about' className='default-btn'>
             Find Out More
           </Link>
-          <Link to='/book-appointment' className='default-btn btn-secondary'>
+          <Link to='/contact' className='default-btn btn-secondary'>
             Get Started
           </Link>
         </div>

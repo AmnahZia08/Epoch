@@ -1400,7 +1400,10 @@ Banner Area CSS
 }
 
 .banner-area .content p {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   margin-bottom: 40px;
+  color: var(--white_color);
 }
 
 .banner-area .image {
@@ -3182,6 +3185,7 @@ Contact Section CSS
   border-radius: 100px;
   min-width: 160px;
   border: none;
+  padding: 12px;
 }
 
 .btn-primary {
@@ -3189,7 +3193,6 @@ Contact Section CSS
   display: inline-flex;
   align-items: center;
   overflow: hidden;
-  padding: 12px;
   justify-content: center;
   background-color: var(--main_color);
 }
@@ -3393,4 +3396,58 @@ Contact Section CSS
   100% {
     transform: rotate(1turn);
   }
+}
+
+/* strategies-area */
+.strategies-area h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+}
+.strategies-area p {
+  font-size: 20px;
+  color: var(--white_color);
+  margin-left: auto;
+}
+.strategies-area .heading-area {
+  flex-direction: row;
+}
+.feature-card {
+  background-color: #0C1E3F;
+  padding: 23px 22px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 412px;
+}
+
+.feature-card-icon {
+  background-image: linear-gradient(to right, #e101ff, #7f01ff);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.feature-card-icon i {
+   color: var(--white_color);
+  font-size: 18px;
+}
+
+.feature-card-title {
+  color: var(--white_color);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.feature-card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
 }

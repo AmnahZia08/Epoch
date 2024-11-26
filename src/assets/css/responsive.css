@@ -41,15 +41,14 @@
     top: 10px;
     font-size: 20px;
   }
-  .section-title-center h2 {
-    font-size: 28px;
-  }
+
   .section-title-center .width {
     margin-bottom: 40px;
   }
   .sub-t {
     font-size: 14px;
   }
+  .section-title-center h2,
   .section-title h2 {
     font-size: 28px;
   }
@@ -495,6 +494,23 @@
   .tech-section p {
     font-size: 17px;
   }
+  /* strategies-area */
+  .strategies-area h2 {
+     font-size: 28px;
+  }
+    .strategies-area p {
+     font-size: 17px;
+  }
+  .strategies-area .heading-area{
+    flex-direction: column;
+  }
+  .feature-card-row{
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card {
+  min-width: 255px;
+}
 }
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -656,7 +672,7 @@
     top: 85%;
     left: 5%;
   }
-    .testimonial-section .ri-arrow-left-line {
+  .testimonial-section .ri-arrow-left-line {
     right: 20px;
   }
   .testimonial-section .ri-arrow-right-line {
@@ -743,6 +759,10 @@
   }
   .tech-section p {
     font-size: 17px;
+  }
+    /* strategies-area */
+  .strategies-area h2 {
+     font-size: 40px;
   }
 }
 /* Min width 992px to Max width 1199px */

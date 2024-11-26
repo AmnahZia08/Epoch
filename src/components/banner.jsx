@@ -19,11 +19,11 @@ const Banner = () => {
                 solutions. Enhance efficiency, drive innovation, and stay ahead
                 of the competition.
               </p>
-              <div>
-                <Link to='/about-us' className='btn btn-primary me-2'>
-                  Find More
+              <div className='cta'>
+                <Link to='/about' className='btn btn-primary me-2'>
+                  <span className='btn-text'>Find More</span>
                 </Link>
-                <Link to='/book-appointment' className='btn btn-secondary'>
+                <Link to='/contact' className='btn btn-secondary'>
                   Get Started
                 </Link>
               </div>
