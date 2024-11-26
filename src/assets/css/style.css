@@ -1619,6 +1619,11 @@ Team Area CSS
   display: flex;
   justify-content: center;
 }
+.team-area .image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .team-area .image-item::before {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000000 130%);
@@ -1700,22 +1705,29 @@ Team Area CSS
   overflow-x: clip; */
 }
 
-.team-area .navigation {
-  margin-top: 10px;
+.testimonial-section .ri-arrow-left-line {
   position: absolute;
+  left: -42px;
   top: 40%;
-  left: -75px;
-  z-index: 100;
-  transition: var(--transition);
+}
+.testimonial-section .ri-arrow-right-line {
+  position: absolute;
+  right: -42px;
+  top: 40%;
 }
 
-.team-area .ri-arrow-right-line,
-.team-area .ri-arrow-left-line {
+.testimonial-section .ri-arrow-right-line,
+.testimonial-section .ri-arrow-left-line {
   font-size: 26px;
   padding: 10px;
   background-color: #953bf521;
-  border-radius: 100px;
+  border-radius: 100%;
   color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*================================================
@@ -2001,13 +2013,13 @@ Testimonial Area CSS
 }
 
 .testimonial-area .user:nth-child(4) {
-  top: 75%;
+  top: 58%;
   right: 14%;
   animation: movebounce 5s linear infinite;
 }
 
 .testimonial-area .user:nth-child(5) {
-  top: 85%;
+  top: 70%;
   left: 18%;
   animation: movebounce 3s linear infinite;
 }

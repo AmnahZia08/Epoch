@@ -57,7 +57,7 @@ const Services = () => {
                 <h3 className='mb-3 mt-2'>{service.title}</h3>
                 <p>{service.description}</p>
                 <NavLink to={service.link} className='btn btn-primary'>
-                  <span class='btn-text'>Learn More</span>
+                  <span className='btn-text'>Learn More</span>
                 </NavLink>
               </div>
             </div>

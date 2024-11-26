@@ -98,7 +98,7 @@ const ContactForm = () => {
 
                 <div className='col-lg-12 col-md-12'>
                   <button type='submit' className='btn btn-primary'>
-                    <span class='btn-text'>Submit</span>
+                    <span className='btn-text'>Submit</span>
                   </button>
                 </div>
               </div>

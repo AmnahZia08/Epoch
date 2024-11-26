@@ -126,21 +126,6 @@
     font-size: 17px;
   }
   /* team area  */
-  .team-area .navigation {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 10px;
-  }
-
-  .team-area .ri-arrow-right-line,
-  .team-area .ri-arrow-left-line {
-    font-size: 20px;
-  }
 
   /* about area */
   .about-area .image {
@@ -179,6 +164,30 @@
     --moz-column-count: 1;
   }
   /* testimonial area */
+  .testimonial-section .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+  }
+  .testimonial-area {
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+  }
+  .testimonial-section .ri-arrow-left-line {
+    right: 20px;
+  }
+  .testimonial-section .ri-arrow-right-line {
+    left: 20px;
+  }
+  .testimonial-section .ri-arrow-right-line,
+  .testimonial-section .ri-arrow-left-line {
+    font-size: 20px;
+  }
   .testimonial-area .user img {
     height: 60px;
     width: 60px;
@@ -193,17 +202,19 @@
     font-size: 15px;
   }
   .testimonial-area .user:nth-child(2) {
-    top: -6%;
+    top: -12%;
+    left: 1%;
   }
   .testimonial-area .user:nth-child(3) {
-    top: -3%;
+    top: -20%;
   }
   .testimonial-area .user:nth-child(4) {
-    bottom: 6%;
+    top: 70%;
+    right: 5%;
   }
   .testimonial-area .user:nth-child(5) {
-    bottom: 70px;
-    left: 9%;
+    top: 85%;
+    left: 5%;
   }
   /* brands area */
   .brands-area p {
@@ -612,6 +623,45 @@
     height: 70px;
     width: 70px;
   }
+  .testimonial-section .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+  }
+  .testimonial-area {
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+  }
+  .testimonial-section .ri-arrow-right-line,
+  .testimonial-section .ri-arrow-left-line {
+    font-size: 20px;
+  }
+  .testimonial-area .user:nth-child(2) {
+    top: -12%;
+    left: 1%;
+  }
+  .testimonial-area .user:nth-child(3) {
+    top: -20%;
+  }
+  .testimonial-area .user:nth-child(4) {
+    top: 70%;
+    right: 5%;
+  }
+  .testimonial-area .user:nth-child(5) {
+    top: 85%;
+    left: 5%;
+  }
+    .testimonial-section .ri-arrow-left-line {
+    right: 20px;
+  }
+  .testimonial-section .ri-arrow-right-line {
+    left: 20px;
+  }
   /* pricing area */
   .pricing-area .pricing {
     font-size: 65px;
@@ -634,8 +684,8 @@
   }
 
   /* article area */
-   .article-area h2 {
-    font-size: 28px;
+  .article-area h2 {
+    font-size: 40px;
   }
   .article-area .item .pop-content h3 {
     font-size: 25px;
@@ -686,7 +736,7 @@
   /* Tech section */
   .testimonial-section h2,
   .tech-section h2 {
-    font-size: 28px;
+    font-size: 40px;
   }
   .tech-section h4 {
     font-size: 20px;
@@ -713,7 +763,7 @@
   }
   .navbar .navbar-nav .nav-item:last-child:hover {
     width: 160px;
-}
+  }
 }
 /* Min width 1750px */
 @media only screen and (min-width: 1750px) {

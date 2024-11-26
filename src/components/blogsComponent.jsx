@@ -32,7 +32,7 @@ const BlogsComponent = () => {
                   </div>
                   <h2>Latest News & Articles</h2>
                   <Link className='btn btn-primary' to='/blog'>
-                    <span class='btn-text'>See More</span>
+                    <span className='btn-text'>See More</span>
                   </Link>
                 </div>
               </div>

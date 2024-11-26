@@ -58,7 +58,7 @@ const About = ({
               <p>{description || staticText.desc}</p>
               {showButton ? (
                 <Link className='btn btn-primary' to='/about'>
-                  <span class='btn-text'>Learn More</span>
+                  <span className='btn-text'>Learn More</span>
                 </Link>
               ) : null}
             </div>

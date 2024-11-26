@@ -23,7 +23,7 @@ const QuerySection = () => {
               aria-label='Email'
             />
             <Link className='btn btn-primary'>
-              <span class='btn-text'>{getStarted}</span>
+              <span className='btn-text'>{getStarted}</span>
             </Link>
           </div>
         </div>

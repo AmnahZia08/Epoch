@@ -42,9 +42,10 @@ const TeamComponent = forwardRef(
               }}
               loop
               className='image-courser'
+              noSwipingClass={swiperRef ? 'no-swipe' : ''}
             >
               {data.map(({ id, img, name, position, social_link }) => (
-                <SwiperSlide key={id}>
+                <SwiperSlide key={id} className={swiperRef ? 'no-swipe' : ''}>
                   <TeamCard
                     img={img}
                     name={name}
