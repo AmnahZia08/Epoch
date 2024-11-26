@@ -141,7 +141,7 @@ const Testimonial = () => {
 
   return (
     <div className='testimonial-section ptb-100'>
-      <div className='position-relative' style={{ bottom: '-600px' }}>
+      <div className='position-relative'>
         <div className='outer_circle'>
           <div className='inner_circle' />
         </div>
@@ -159,14 +159,6 @@ const Testimonial = () => {
           data={testimonialData}
           swiperRef={swiperRefs.team}
         />
-        <div className='d-flex align-items-center justify-content-between navigation mt-3'>
-          <div onClick={handleSlidePrev}>
-            <i className='ri-arrow-left-line' />
-          </div>
-          <div onClick={handleSlideNext}>
-            <i className='ri-arrow-right-line' />
-          </div>
-        </div>
         <div className='testimonial-area pb-100'>
           <Swiper
             spaceBetween={30}
@@ -197,6 +189,14 @@ const Testimonial = () => {
               </div>
             );
           })}
+          <div className='d-flex align-items-center justify-content-between navigation mt-3'>
+            <div onClick={handleSlidePrev}>
+              <i className='ri-arrow-left-line' />
+            </div>
+            <div onClick={handleSlideNext}>
+              <i className='ri-arrow-right-line' />
+            </div>
+          </div>
         </div>
         <div className='star'></div>
         <div className='star'></div>

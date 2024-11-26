@@ -174,7 +174,6 @@
   /* testimonial area */
   .testimonial-section .navigation {
     position: absolute;
-    top: 100%;
     left: 0;
     right: 0;
     width: fit-content;
@@ -682,7 +681,6 @@
   }
   .testimonial-section .navigation {
     position: absolute;
-    top: 100%;
     left: 0;
     right: 0;
     width: fit-content;
