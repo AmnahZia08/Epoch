@@ -114,9 +114,6 @@
     padding: 10px 15px;
     font-size: 16px;
   }
-  .banner-area .image {
-    padding-top: 30px;
-  }
 
   /* services area */
   .services-area .single-services-box {
@@ -174,7 +171,6 @@
   /* testimonial area */
   .testimonial-section .navigation {
     position: absolute;
-    top: 100%;
     left: 0;
     right: 0;
     width: fit-content;
@@ -614,9 +610,6 @@
     padding: 20px 10px;
     font-size: 16px;
   }
-  .banner-area .image {
-    padding-top: 30px;
-  }
   .banner-area .scroll-down {
     left: -87%;
   }
@@ -682,7 +675,6 @@
   }
   .testimonial-section .navigation {
     position: absolute;
-    top: 100%;
     left: 0;
     right: 0;
     width: fit-content;
@@ -838,7 +830,11 @@
   .section-container .description {
     font-size: 17px;
   }
-}
+
+  .reasons-area .heading-area,
+  .strategies-area .heading-area {
+    flex-direction: column;
+  }}
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .container-fluid {

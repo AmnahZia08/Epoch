@@ -23,7 +23,7 @@ const FeatureCardRow = () => {
   ];
 
   return (
-    <div className='feature-card-row'>
+    <div className='feature-card-row mt-4'>
       {features.map((feature, index) => (
         <FeatureCard key={index} icon={feature.icon} title={feature.title} />
       ))}

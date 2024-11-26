@@ -3,7 +3,7 @@ import man from '../assets/img/mannnnn.png';
 import { Link } from 'react-router-dom';
 const Banner = () => {
   return (
-    <div className='banner-area ptb-100 vh-100'>
+    <div className='banner-area overflow-hidden'>
       <div className='container-fluid'>
         <div className='row align-items-center g-0'>
           <div className='col-lg-6'>
