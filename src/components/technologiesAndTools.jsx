@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const TechnologiesAndTools = () => {
   const technologies = [
@@ -27,19 +28,26 @@ const TechnologiesAndTools = () => {
   return (
     <div className='tech-section ptb-100'>
       <div className='container'>
-        <h2 className='text-center pb-5'>Technologies and Tools</h2>
+        <motion.div
+          className='position-relative'
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          viewport={{ once: true }}
+        >
+          <h2 className='text-center pb-5'>Technologies and Tools</h2>
 
-        <div className='row justify-content-center gap-4'>
-          {technologies.map((tech, index) => (
-            <div
-              key={index}
-              className='col-lg-3 col-md-6 box__bg gradient-border text-center d-flex flex-column align-items-center p-4'
-            >
-              <h4 className='mb-5 mt-2'>{tech.label}</h4>
-              <p>{tech.description}</p>
-            </div>
-          ))}
-        </div>
+          <div className='row justify-content-center gap-4'>
+            {technologies.map((tech, index) => (
+              <div
+                key={index}
+                className='col-lg-3 col-md-6 box__bg text-center d-flex flex-column align-items-center p-4 justify-content-start'
+              >
+                <h4 className='mb-5 mt-2'>{tech.label}</h4>
+                <p>{tech.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

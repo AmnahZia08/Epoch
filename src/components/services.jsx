@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const servicesData = [
   {
@@ -46,23 +47,30 @@ const Services = () => {
   return (
     <div className='services-area ptb-100'>
       <div className='container'>
-        <div className='row'>
-          {servicesData.map((service, index) => (
-            <div className='col-lg-4 col-md-6 mb-4' key={index}>
-              <div
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className={`single-services-box p-4 ${hoveredIndex === index ? 'gradient-border' : ''}`}
-              >
-                <h3 className='mb-3 mt-2'>{service.title}</h3>
-                <p>{service.description}</p>
-                <NavLink to={service.link} className='btn btn-primary'>
-                  <span className='btn-text'>Learn More</span>
-                </NavLink>
+        <motion.div
+          className='position-relative'
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          viewport={{ once: true }}
+        >
+          <div className='row'>
+            {servicesData.map((service, index) => (
+              <div className='col-lg-4 col-md-6 mb-4' key={index}>
+                <div
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  className={`single-services-box p-4 ${hoveredIndex === index ? 'gradient-border' : ''}`}
+                >
+                  <h3 className='mb-3 mt-2'>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <NavLink to={service.link} className='btn btn-primary'>
+                    <span className='btn-text'>Learn More</span>
+                  </NavLink>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );
