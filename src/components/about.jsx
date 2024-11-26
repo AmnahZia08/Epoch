@@ -11,6 +11,7 @@ const About = ({
   image,
   direction = 'rtl',
   showButton = false,
+  showGradient,
 }) => {
   const staticText = strings.offer;
 
@@ -19,7 +20,13 @@ const About = ({
   };
 
   return (
-    <div className='about-area ptb-100'>
+    <div className='about-area ptb-100 position-relative'>
+      {showGradient ? (
+        <div
+          className='section-gradient section-gradient-left'
+          style={{ bottom: '100px' }}
+        />
+      ) : null}
       <div className='container'>
         <motion.div
           className='row align-items-center'
@@ -41,6 +48,12 @@ const About = ({
             <div className='image'>
               <img src={image || AboutCard} alt='Section Heading' />
             </div>
+            {!showGradient ? (
+              <div
+                className='section-gradient'
+                style={{ bottom: '250px', right: '180px' }}
+              />
+            ) : null}
           </div>
           <div className='col-lg-6'>
             <div

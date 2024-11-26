@@ -19,6 +19,7 @@ const AboutUs = () => {
         heading={imageCard.heading}
         subHeading={imageCard.subHeading}
         description={imageCard.desc}
+        showGradient
       />
       <Brands />
       <Testimonial />

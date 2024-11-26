@@ -3503,7 +3503,7 @@ Contact Section CSS
   width: 500px;
   height: 500px;
   background-image: linear-gradient(.20turn, #00D9FF, 10%, #9000FF);
-  filter: blur(101.8px);
+  filter: blur(123.8px);
   border-radius: 50%; 
   transform-origin: center;
   z-index: -1;
@@ -3518,4 +3518,24 @@ Contact Section CSS
   100% {
     transform: translateX(calc(100vw - 500px)); 
   }
+}
+
+.section-gradient{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(.45turn,#3700FF 20%, #FF0099, 40%, #FF0099);
+  filter: blur(115.8px);
+  border-radius: 50%; 
+  transform-origin: center;
+  z-index: -1;
+   transform: rotate(40.33deg);
+  background-size: 200% 200%;
+}
+.section-gradient-left{
+  left: -250px; 
+}
+.section-gradient-right{
+  right: -250px; 
+   transform: scaleX(-1)
 }

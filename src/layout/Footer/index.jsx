@@ -5,7 +5,15 @@ import BlogsComponent from '../../components/blogsComponent';
 
 const Footer = () => {
   return (
-    <div>
+    <div className='position-relative'>
+      <div
+        className='section-gradient section-gradient-right'
+        style={{ top: '200px' }}
+      />
+      <div
+        className='section-gradient section-gradient-left'
+        style={{ bottom: '500px' }}
+      />
       <BlogsComponent />
       <QuerySection />
       <LegalAndLinks />

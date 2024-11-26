@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 
 const Video = ({ url, fullWidth }) => {
   return (
-    <div className='ptb-100 d-flex justify-content-center'>
+    <div className='ptb-100 d-flex justify-content-center position-relative'>
+      <div
+        className='section-gradient section-gradient-right'
+        style={{ bottom: '20px' }}
+      />
       <motion.div
         initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}

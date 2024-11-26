@@ -2,7 +2,11 @@ import React from 'react'
 import contact_img from '../assets/img/contact.png';
 const ContactForm = () => {
   return (
-    <div className='contact-area ptb-100'>
+    <div className='contact-area ptb-100 position-relative'>
+      <div
+        className='section-gradient section-gradient-right col-lg-12'
+        style={{ bottom: '100px' }}
+      />
       <div className='container d-flex'>
         <div className='col-lg-6'>
           <div className='section-title'>
