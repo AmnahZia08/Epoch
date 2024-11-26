@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <div className='contact-area ptb-100 position-relative'>
       <div
-        className='section-gradient section-gradient-right col-lg-12 overflow-hidden'
+        className='section-gradient section-gradient-right col-lg-12 overflow-x-hidden'
         style={{ bottom: '100px' }}
       />
       <div className='container d-flex'>

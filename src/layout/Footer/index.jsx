@@ -5,7 +5,7 @@ import BlogsComponent from '../../components/blogsComponent';
 
 const Footer = () => {
   return (
-    <div className='position-relative overflow-hidden'>
+    <div className='position-relative overflow-x-hidden'>
       <div
         className='section-gradient section-gradient-right'
         style={{ top: '200px' }}
