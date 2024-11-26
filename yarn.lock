@@ -1996,11 +1996,6 @@ react-router@6.23.1:
   dependencies:
     "@remix-run/router" "1.16.1"
 
-react-slot-counter@^2.2.5:
-  version "2.3.2"
-  resolved "https://registry.npmjs.org/react-slot-counter/-/react-slot-counter-2.3.2.tgz"
-  integrity sha512-8jSePt/PkErP5eg/NYcThCYDWQP+OtBPiPaQgAaWaLCee9lpZrAGbc8OOYVUH5XgWuX1f7KA8V71xwznJidiIw==
-
 react@^18.2.0:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
