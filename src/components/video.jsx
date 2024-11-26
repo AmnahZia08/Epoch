@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import { motion } from 'framer-motion';
 
-const Video = ({ url, fullWidth }) => {
+const Video = ({ url }) => {
   return (
     <div className='ptb-100 d-flex justify-content-center position-relative overflow-x-hidden'>
       <div
@@ -19,7 +19,7 @@ const Video = ({ url, fullWidth }) => {
           controls={true}
           playing={false}
           volume={0.8}
-          width={fullWidth ? '100vw' : '90vw'}
+          width='90vw'
         />
       </motion.div>
     </div>

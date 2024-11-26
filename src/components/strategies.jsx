@@ -1,11 +1,15 @@
 import React from 'react';
-import Video from './video';
 import FeatureCardRow from './featureCardRow';
 import { motion } from 'framer-motion';
+import ReactPlayer from 'react-player';
 
 const Strategies = () => {
   return (
-    <div className='strategies-area ptb-100'>
+    <div className='strategies-area ptb-100 position-relative overflow-x-hidden'>
+      <div
+        className='section-gradient section-gradient-right'
+        style={{ bottom: '20px' }}
+      />
       <div className='container'>
         <motion.div
           className='position-relative'
@@ -22,9 +26,12 @@ const Strategies = () => {
               results than traditional methods.
             </p>
           </div>
-          <Video
+          <ReactPlayer
             url='https://www.youtube.com/watch?v=JLnycPtolfw'
-            fullWidth={true}
+            controls={true}
+            playing={false}
+            volume={0.8}
+            width={'100%'}
           />
           <FeatureCardRow />
         </motion.div>
