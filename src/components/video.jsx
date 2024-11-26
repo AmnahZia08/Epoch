@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import { motion } from 'framer-motion';
 
-const Video = ({ url, fullWidth = flase }) => {
+const Video = ({ url, fullWidth }) => {
   return (
     <div className='ptb-100 d-flex justify-content-center'>
       <motion.div
