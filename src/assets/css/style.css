@@ -3447,8 +3447,51 @@ Contact Section CSS
   gap: 20px;
   padding: 20px;
 }
+
+/* why us */
 .colored-text {
   color: #9000ff !important;
   font-weight: 700;
   margin-bottom: 0px;
 }
+
+.icon-image {
+  width: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  color: white;
+  position: relative;
+}
+
+/* .section-container:hover .arrow-btn::after {
+  content: '';
+  position: absolute;
+  color: white;
+  background-color: red;
+}
+
+.section-container:hover .icon-image {
+  transform: scale(2);
+} */

@@ -1,27 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import WhyUsSlider from './whyUsSlider';
+import WhyUsImage from '../assets/img/whyus.png';
 
 const features = [
   {
     title: 'Cutting-Edge AI Technology',
     description:
       'Using AI and machine learning, we offer precise, timely insights tailored to your business needs.',
-    image: 'path/to/image1.png',
-    link: 'link/to/more/details1',
+    image: WhyUsImage,
   },
   {
     title: 'Cutting-Edge AI Technology',
     description:
       'Using AI and machine learning, we offer precise, timely insights tailored to your business needs.',
-    image: 'path/to/image2.png',
-    link: 'link/to/more/details2',
+    image: WhyUsImage,
   },
   {
     title: 'Cutting-Edge AI Technology',
     description:
       'Using AI and machine learning, we offer precise, timely insights tailored to your business needs.',
-    image: 'path/to/image3.png',
-    link: 'link/to/more/details3',
+    image: WhyUsImage,
   },
 ];
 
@@ -48,6 +47,9 @@ const WhyUs = () => {
               </p>
             </div>
           </div>
+          <WhyUsSlider data={features} />
+          <WhyUsSlider data={features} />
+          <WhyUsSlider data={features} />
         </motion.div>
       </div>
     </div>
