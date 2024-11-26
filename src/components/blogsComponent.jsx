@@ -38,10 +38,9 @@ const BlogsComponent = () => {
               </div>
             </div>
             <div className='col-lg-8'>
-              <div className='article-content'>
+              <div>
                 <Swiper
                   spaceBetween={30}
-                  // slidesPerView={2}
                   breakpoints={{
                     0: {
                       slidesPerView: 1,
@@ -58,11 +57,13 @@ const BlogsComponent = () => {
                     1200: {
                       slidesPerView: 2,
                     },
+                    1920: {
+                      slidesPerView: 3,
+                    },
                   }}
                   pagination={pagination}
-                  loop
-                  className=''
                   modules={[Pagination]}
+                  className='vw-100'
                 >
                   {blogData
                     .slice(0, 4)

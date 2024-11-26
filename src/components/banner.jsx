@@ -3,7 +3,7 @@ import man from '../assets/img/mannnnn.png';
 import { Link } from 'react-router-dom';
 const Banner = () => {
   return (
-    <div className='banner-area overflow-hidden'>
+    <div className='banner-area overflow-hidden vh-100'>
       <div className='container-fluid'>
         <div className='row align-items-center g-0'>
           <div className='col-lg-6'>
@@ -36,7 +36,7 @@ const Banner = () => {
           </div>
         </div>
         <div className='scroll-down'>
-          <Link to='#features'>
+          <Link>
             <div className='mouse'></div>
           </Link>
         </div>

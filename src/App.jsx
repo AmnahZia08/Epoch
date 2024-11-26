@@ -7,6 +7,7 @@ import Testimonial from './components/testimonial';
 import { ScrollRestoration } from 'react-router-dom';
 import { strings } from './locales';
 import Strategies from './components/strategies';
+import GradientContainer from './components/gradientContainer';
 
 const services = [
   {
@@ -45,18 +46,18 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <div className='position-relative' style={{ top: '200px', zIndex: 0 }}>
-        <div className='outer_circle'>
-          <div className='inner_circle' />
-        </div>
-      </div>
-      <About
-        direction='ltr'
-        showButton
-        heading={imageCard.heading}
-        subHeading={imageCard.subHeading}
-        description={imageCard.desc}
-        showGradient={true}
+      <GradientContainer
+        position={'-350px'}
+        component={
+          <About
+            direction='ltr'
+            showButton
+            heading={imageCard.heading}
+            subHeading={imageCard.subHeading}
+            description={imageCard.desc}
+            showGradient={true}
+          />
+        }
       />
       <Services data={services} />
       <Brands />

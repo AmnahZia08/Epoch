@@ -46,7 +46,7 @@ const Services = ({ data }) => {
 
   return (
     <div className='services-area ptb-100'>
-      <div className='container'>
+      <div className='container-fluid'>
         <motion.div
           className='position-relative'
           initial={{ opacity: 0, y: 200 }}

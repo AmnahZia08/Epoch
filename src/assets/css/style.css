@@ -259,8 +259,8 @@ Navbar Area Style
   color: var(--white_color);
   position: relative;
   transition: var(--transition);
-  font-weight: 500;
-  font-size: var(--font-size);
+  font-weight: 600;
+  font-size: 18px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1390,7 +1390,7 @@ Banner Area CSS
 .banner-area .content h1 {
   font-size: 58px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .banner-area .searchbox {
@@ -1400,10 +1400,9 @@ Banner Area CSS
 }
 
 .banner-area .content p {
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  margin-bottom: 40px;
-  color: var(--white_color);
+  margin-bottom: 30px;
+  color: #9094A6;
+  font-size: 20px;
 }
 
 .banner-area .image {
@@ -1546,7 +1545,7 @@ services Area CSS
 .services-area .single-services-box {
   border-radius: 30px;
   background: linear-gradient(90deg, #e101ff26 0%, #7f01ff26 100%);
-  height: 420px;
+  height: 311px;
 }
 .services-area .fixed-height {
   height: 350px;
@@ -1564,7 +1563,6 @@ services Area CSS
 .services-area .single-services-box h3 {
   font-size: 42px;
   font-weight: 700;
-  width: 85%;
   color: var(--white_color);
   position: relative;
 }
@@ -1711,13 +1709,13 @@ Team Area CSS
 
 .testimonial-section .ri-arrow-left-line {
   position: absolute;
-  left: -42px;
-  top: 40%;
+  left: -55px;
+  top: -100%;
 }
 .testimonial-section .ri-arrow-right-line {
   position: absolute;
-  right: -42px;
-  top: 40%;
+  right: -55px;
+   top: -100%;
 }
 
 .testimonial-section .ri-arrow-right-line,
@@ -1814,6 +1812,11 @@ About Area CSS
 .about-area .sub-counter p {
   color: var(--white_color);
 }
+  .about-area .image {
+   max-width: 600px;
+   max-height: 600px;
+   margin: auto;
+  }
 
 /*================================================
 Pricing Area CSS
@@ -2249,7 +2252,8 @@ Blog Area CSS
   overflow: hidden;
   display: block;
   cursor: pointer;
-  height: 550px;
+  height: 421px;
+  width: 421px;
 }
 .article-area .item img {
   width: 100%;
@@ -2415,7 +2419,8 @@ Footer Area CSS
 }
 
 .top-border {
-  border-top: 1px solid #0c1923;
+  border-top: 1px solid #656c7b;
+  width: 90%;
 }
 .footer-area .pr-line {
   background-color: var(--white_color);
@@ -3186,6 +3191,7 @@ Contact Section CSS
   min-width: 160px;
   border: none;
   padding: 12px;
+  font-size: 17px;
 }
 
 .btn-primary {
@@ -3275,7 +3281,7 @@ Contact Section CSS
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.51);
   padding: 10px 30px;
@@ -3283,6 +3289,8 @@ Contact Section CSS
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  max-width: 1465px;
+  margin: auto;
 }
 
 .query-section-content {
@@ -3421,8 +3429,7 @@ Contact Section CSS
 .feature-card-icon {
   background-image: linear-gradient(to right, #e101ff, #7f01ff);
   border-radius: 10px;
-  width: 40px;
-  height: 40px;
+ padding: 22px 23px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3431,14 +3438,13 @@ Contact Section CSS
 
 .feature-card-icon i {
   color: var(--white_color);
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .feature-card-title {
   color: var(--white_color);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
-  margin: 0;
 }
 
 .feature-card-row {
@@ -3538,17 +3544,16 @@ Contact Section CSS
 .outer_circle {
   position: relative;
   width: 100%;
-  right: 0;
-  height: 200px;
+  height: 300px;
   border-radius: 50%;
   background: #000;
-  overflow: hidden;
+    overflow: hidden;
   z-index: 1;
-  filter: blur(20.8px);
+  filter: blur(40.8px);
 }
 
 .inner_circle {
-  background-image: linear-gradient(to right, #5700ff80 0%, #2f00ff80 100%);
+  background-image: radial-gradient(circle, #5700ff70 , #2f00ff70 );
   content: '';
   position: absolute;
   top: 40%;
@@ -3556,4 +3561,8 @@ Contact Section CSS
   left: 0;
   right: 0;
   z-index: 0;
+}
+
+.article-area .swiper-slide {
+  max-width: 421px;
 }

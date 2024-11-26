@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const LegalAndLinks = () => {
   return (
     <footer className='footer-area'>
-      <div className='container top-border'>
-        <div className='footer-top-area pt-100'>
+      <div className='container-fluid top-border'>
+        <div className='footer-top-area ptb-100'>
           <div className='row'>
             <div className='col-lg-4 col-md-6 col-sm-6'>
               <div className='single-footer-widget'>

@@ -11,11 +11,11 @@ const QuerySection = () => {
 
   return (
     <div className='ptb-100'>
-      <div className='container d-flex'>
+      <div className='container-fluid d-flex'>
         <div className='query-section-content'>
           <h6 className='query-section-title'>{querySection.title}</h6>
           <p className='query-section-desc'>{querySection.desc}</p>
-          <div className='d-flex align-items-center justify-content-center mt-5 gap-2'>
+          <div className='d-flex align-items-center mt-5 gap-2'>
             <input
               type='email'
               className='form-control query-section-input'
