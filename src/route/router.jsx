@@ -15,6 +15,7 @@ import PrivacyPolicy from '../pages/privacy-policy';
 import MLModelDevelopment from '../pages/MLModelDevelopment';
 import ERPDevelopment from '../pages/ERPDevelopment';
 import AIPoweredSoftware from '../pages/AIPoweredSoftware'; // Import the new AI-Powered Software component
+import SupportAndOptimization from '../pages/SupportAndOptimization';
 
 export const router = createBrowserRouter([
   {
@@ -67,12 +68,16 @@ export const router = createBrowserRouter([
         element: <PrivacyPolicy />,
       },
       {
-        path: '/ml-model-development',
+        path: '/custom-model-development',
         element: <MLModelDevelopment />,
       },
       {
         path: '/erp-development',
         element: <ERPDevelopment />,
+      },
+      {
+        path: '/support-and-optimization',
+        element: <SupportAndOptimization />,
       },
       {
         path: '/ai-powered-software', // Add the new path for AI-Powered Software

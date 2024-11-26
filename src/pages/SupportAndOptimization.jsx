@@ -1,23 +1,21 @@
 import React from 'react';
 import PageHeader from '../components/common/pageHeader';
 import { strings } from '../locales';
-import TechnologiesAndTools from '../components/technologiesAndTools';
-import Services from '../components/services';
-import Brands from '../components/brands';
-import About from '../components/about';
-import CustomModelImage from '../assets/img/custom-model.png';
-import ContactUs from '../components/contactUs';
 import WhyUs from '../components/whyUs';
+import Services from '../components/services';
+import About from '../components/about';
+import Brands from '../components/brands';
+import TechnologiesAndTools from '../components/technologiesAndTools';
+import ContactUs from '../components/contactUs';
+import SupportImage from '../assets/img/ongoing-support.png';
 
-const MLModelDevelopment = () => {
-  const {
-    MLModelDevelopment: { subRoute },
-  } = strings;
+const SupportAndOptimization = () => {
+  const { subRoute } = strings.SupportAndOptimization;
   return (
     <>
       <PageHeader subRoute={subRoute} />
       <Services />
-      <About heading={subRoute} image={CustomModelImage} />
+      <About heading={subRoute} image={SupportImage} />
       <Brands />
       <TechnologiesAndTools />
       <WhyUs />
@@ -26,4 +24,4 @@ const MLModelDevelopment = () => {
   );
 };
 
-export default MLModelDevelopment;
+export default SupportAndOptimization;

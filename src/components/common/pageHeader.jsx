@@ -8,8 +8,8 @@ const PageHeader = ({ title, desc, subRoute = '' }) => {
   return (
     <div className='container section-banner d-flex flex-column justify-content-center align-items-center text-center'>
       {!!subRoute ? (
-        <div class='banner-area no-background'>
-          <span class='banner-top-title'>{subRoute}</span>
+        <div className='banner-area no-background'>
+          <span className='banner-top-title'>{subRoute}</span>
         </div>
       ) : null}
       <h1 className='grd-color-1 text-uppercase'>
@@ -18,16 +18,15 @@ const PageHeader = ({ title, desc, subRoute = '' }) => {
       <p className='w-75'>{desc || strings.pageHeaderDesc}</p>
 
       {pathname !== '/contact' ? (
-        <div className='cta'>
-          <Link to='/about-us' className='default-btn me-2'>
-            Find Out More
+        <div className='cta gap-3'>
+          <Link to='/about' className='btn btn-primary'>
+            <span class='btn-text'>Find Out More</span>
           </Link>
-          <Link to='/book-appointment' className='default-btn btn-secondary'>
+          <Link to='/book-appointment' className='btn btn-secondary'>
             Get Started
           </Link>
         </div>
       ) : null}
-      {/* // Add button and image */}
     </div>
   );
 };

@@ -12,11 +12,7 @@ const About = ({
   direction = 'rtl',
   showButton = false,
 }) => {
-  const staticText = strings.aboutUs.imageCard;
-
-  const contentStyle = {
-    textAlign: direction === 'rtl' ? 'right' : 'left',
-  };
+  const staticText = strings.offer;
 
   const flexDirectionStyle = {
     flexDirection: direction === 'rtl' ? 'row-reverse' : 'row',
@@ -43,7 +39,7 @@ const About = ({
         >
           <div className='col-lg-6'>
             <div className='image'>
-              <img src={image || AboutCard} alt='Page Heading' />
+              <img src={image || AboutCard} alt='Section Heading' />
             </div>
           </div>
           <div className='col-lg-6'>
@@ -51,18 +47,18 @@ const About = ({
               className={`content ${showButton ? '' : 'vh-100 d-flex flex-column justify-content-around'}`}
             >
               <div>
-                <div className='banner-area no-background'>
+                <div className='banner-area no-background pt-0'>
                   <span className='banner-top-title'>
-                    {subHeading || staticText.subHeading}
+                    {subHeading || staticText.title}
                   </span>
                 </div>
 
-                <h2 style={contentStyle}>{heading || staticText.heading}</h2>
+                <h2>{heading || staticText.heading}</h2>
               </div>
-              <p style={contentStyle}>{description || staticText.desc}</p>
+              <p>{description || staticText.desc}</p>
               {showButton ? (
-                <Link className='btn btn-primary pt-3 pb-3' to='/about'>
-                  Learn More
+                <Link className='btn btn-primary' to='/about'>
+                  <span class='btn-text'>Learn More</span>
                 </Link>
               ) : null}
             </div>

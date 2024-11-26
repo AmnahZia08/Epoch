@@ -12,15 +12,23 @@
             "desc": "At Epoch, we specialize in creating innovative software solutions powered by artificial intelligence. Our mission is to empower businesses by leveraging AI to drive efficiency, foster innovation, and provide a competitive edge in the market. From AI-driven analytics to automated workflows, our solutions are designed to meet the unique needs of each client."
         }
     },
+    "offer": {
+        "title": "What we offer",
+        "desc": "In today's dynamic business environment, the need for software and operational models that perfectly align with unique business challenges is more critical than ever. At Epoch Al, our custom-model development services are not limited to Al but encompass a wide range of customized solutions designed to meet the specific needs of your business. Whether you require advanced data models, predictive analytics, workflow automation, or bespoke software solutions, our team is equipped to deliver models that drive efficiency and innovation."
+    },
     "MLModelDevelopment": {
         "subRoute": "Custom Model Development"
     },
     "AISoftware": {
         "subRoute": "Expert AI Solution",
-        "title": "Transform your business with AI - powered software"
+        "title": "Transform your business with AI - powered software",
+        "offersHeading": "Comprehensive AI Software Development"
     },
     "ERPDevelopment": {
-        "subRoute": "Custom Model Development"
+        "subRoute": "ERP Development"
+    },
+    "SupportAndOptimization": {
+        "subRoute": "Ongoing Support & Optimization"
     },
     "contactUs": {
         "title": "Contact Us",

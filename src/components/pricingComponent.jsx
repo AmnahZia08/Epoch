@@ -63,24 +63,31 @@ const pricingData = [
         ]
     },
 ]
-const PricingComponent = ({prentClass}) => {
-    return (
-        <div className={`pricing-area pt-100 section-bg ${prentClass}`}>
-            <div className="section-title-center">
-                <div className="width">
-                    <div className="sub-t">Best Pricing Plans</div>
-                    <h2>Our Pricing Plans</h2>
-                </div>
-            </div>
-            <div className="container">
-                <div className="row justify-content-center">
-                    {
-                        pricingData.map(({id, features, link, price, title})=> <PricingCard key={id} id={id} features={features} link={link} price={price} title={title} />)
-                    }
-                </div>
-            </div>
+const PricingComponent = ({ parentClass }) => {
+  return (
+    <div className={`pricing-area pt-100 section-bg ${parentClass}`}>
+      <div className='section-title-center'>
+        <div className='width'>
+          <div className='sub-t'>Best Pricing Plans</div>
+          <h2>Our Pricing Plans</h2>
         </div>
-    )
-}
+      </div>
+      <div className='container'>
+        <div className='row justify-content-center'>
+          {pricingData.map(({ id, features, link, price, title }) => (
+            <PricingCard
+              key={id}
+              id={id}
+              features={features}
+              link={link}
+              price={price}
+              title={title}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default PricingComponent

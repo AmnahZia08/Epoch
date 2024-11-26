@@ -8,13 +8,13 @@ import { ScrollRestoration } from 'react-router-dom'
 const Portfolio = () => {
   return (
     <>
-      <PageHeader pageName={"Portfolio"} />
+      <PageHeader title={'Portfolio'} />
       <Gallery />
       <Brands />
       <InstagramGallery />
-      <ScrollRestoration/>
+      <ScrollRestoration />
     </>
-  )
+  );
 }
 
 export default Portfolio

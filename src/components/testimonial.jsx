@@ -1,95 +1,200 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from "swiper/modules"
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
-import user_1 from '../assets/img/user-1.jpg'
-import user_2 from '../assets/img/user-2.jpg'
-import user_3 from '../assets/img/user-3.jpg'
-import user_4 from '../assets/img/user-4.jpg'
+import client_1 from '../assets/img/client-1.png';
+import client_2 from '../assets/img/client-2.png';
+import client_3 from '../assets/img/client-3.png';
 import TestimonialCard from './common/testimonialCard';
+import TeamComponent from './teamComponent';
 
 const testimonialData = [
-    {
+  {
+    id: 1,
+    name: 'Aloin Lden',
+    position: 'Web Developer',
+    img: client_1,
+    rating: 2.5,
+    review:
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using',
+    social_link: [
+      {
         id: 1,
-        name: "Aloin Lden",
-        position: "Web Developer",
-        img: user_1,
-        rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
-    },
-    {
+        link: '#',
+        icon: 'ri-facebook-fill',
+      },
+      {
         id: 2,
-        name: "Jacob Daniels",
-        position: "Engineer",
-        img: user_3,
-        rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
-    },
-    {
+        link: '#',
+        icon: 'ri-instagram-line',
+      },
+      {
         id: 3,
-        name: "Aloin Lden",
-        position: "Web Developer",
-        img: user_4,
-        rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
-    },
-    {
-        id: 4,
-        name: "Jacob Daniels",
-        position: "Engineer",
-        img: user_2,
-        rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
-    },
-]
+        link: '#',
+        icon: 'ri-linkedin-fill',
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Jacob Daniels',
+    position: 'Engineer',
+    img: client_2,
+    rating: 5,
+    review:
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using',
+    social_link: [
+      {
+        id: 1,
+        link: '#',
+        icon: 'ri-facebook-fill',
+      },
+      {
+        id: 2,
+        link: '#',
+        icon: 'ri-instagram-line',
+      },
+      {
+        id: 3,
+        link: '#',
+        icon: 'ri-linkedin-fill',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Aloin Lden',
+    position: 'Web Developer',
+    img: client_3,
+    rating: 5,
+    review:
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using',
+    social_link: [
+      {
+        id: 1,
+        link: '#',
+        icon: 'ri-facebook-fill',
+      },
+      {
+        id: 2,
+        link: '#',
+        icon: 'ri-instagram-line',
+      },
+      {
+        id: 3,
+        link: '#',
+        icon: 'ri-linkedin-fill',
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Aloin Lden',
+    position: 'Web Developer',
+    img: client_1,
+    rating: 5,
+    review:
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using',
+    social_link: [
+      {
+        id: 1,
+        link: '#',
+        icon: 'ri-facebook-fill',
+      },
+      {
+        id: 2,
+        link: '#',
+        icon: 'ri-instagram-line',
+      },
+      {
+        id: 3,
+        link: '#',
+        icon: 'ri-linkedin-fill',
+      },
+    ],
+  },
+];
 
 const Testimonial = () => {
-    const swiperRef = useRef();
+  const swiperRefs = {
+    testimonial: useRef(),
+    team: useRef(),
+  };
 
-    return (
-        <div className="testimonial-area ptb-100">
-            <div className='container'>
-                <Swiper
-                    spaceBetween={30}
-                    slidesPerView={1}
-                    loop
-                    onBeforeInit={(swiper) => {
-                        swiperRef.current = swiper;
-                    }}
-                    className='image-courser'
-                    modules={[Navigation]}
-                >
-                    {
-                        testimonialData.map(({ id, img, position, rating, review, name }) => {
-                            return (
-                                <SwiperSlide key={id}> <TestimonialCard  img={img} position={position} name={name} rating={rating} review={review} /> </SwiperSlide>
-                            )
-                        })
-                    }
-                    <div className='d-flex align-items-center justify-content-center mt-3 gap-2  '>
-                        <div onClick={() => swiperRef.current?.slidePrev()}><i className="fi fi-tr-arrow-left"></i></div>
-                        <div onClick={() => swiperRef.current?.slideNext()}><i className="fi fi-tr-arrow-right"></i></div>
-                    </div>
-                </Swiper>
+  const handleSlidePrev = () => {
+    swiperRefs.testimonial.current?.slidePrev();
+    swiperRefs.team.current?.slidePrev();
+  };
 
-                {
-                    testimonialData.map(({ id, img }) => {
-                        return (
-                            <div key={id} className="user">
-                                <img src={img} alt="image" />
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <div className="star"></div>
-            <div className="star"></div>
-            <div className="star"></div>
-            <div className="star"></div>
-            <div className="star"></div>
+  const handleSlideNext = () => {
+    swiperRefs.testimonial.current?.slideNext();
+    swiperRefs.team.current?.slideNext();
+  };
+
+  return (
+    <div className='testimonial-section ptb-100'>
+      <div className='container'>
+        <div className='banner-area no-background text-center pt-0'>
+          <span className='banner-top-title'>Testimonials</span>
         </div>
-    )
-}
+        <h2 className='text-center pb-5 w-50 mx-auto'>
+          What Our Clients Say About Us
+        </h2>
 
-export default Testimonial
+        <TeamComponent
+          parentClass={'pt-0 pb-100'}
+          data={testimonialData}
+          swiperRef={swiperRefs.team}
+        />
+
+        <div className='d-flex align-items-center justify-content-between navigation mt-3'>
+          <div onClick={handleSlidePrev}>
+            <i className='ri-arrow-left-line' />
+          </div>
+          <div onClick={handleSlideNext}>
+            <i className='ri-arrow-right-line' />
+          </div>
+        </div>
+
+        <div className='testimonial-area ptb-100'>
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            loop
+            onBeforeInit={(swiper) => {
+              swiperRefs.testimonial.current = swiper;
+            }}
+            className='image-courser'
+            modules={[Navigation]}
+          >
+            {testimonialData.map(({ id, position, rating, review, name }) => (
+              <SwiperSlide key={id}>
+                <TestimonialCard
+                  position={position}
+                  name={name}
+                  rating={rating}
+                  review={review}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          {testimonialData.map(({ id, img }) => {
+            return (
+              <div key={id} className='user'>
+                <img src={img} alt='image' />
+              </div>
+            );
+          })}
+        </div>
+        <div className='star'></div>
+        <div className='star'></div>
+        <div className='star'></div>
+        <div className='star'></div>
+        <div className='star'></div>
+      </div>
+    </div>
+  );
+};
+
+export default Testimonial;

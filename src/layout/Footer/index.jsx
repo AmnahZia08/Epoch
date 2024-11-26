@@ -1,12 +1,12 @@
 import React from 'react';
-import NewsSection from './NewsSection';
 import QuerySection from './QuerySection';
 import LegalAndLinks from './LegalAndLinks';
+import BlogsComponent from '../../components/blogsComponent';
 
 const Footer = () => {
   return (
     <div>
-      {/* <NewsSection /> */}
+      <BlogsComponent />
       <QuerySection />
       <LegalAndLinks />
     </div>

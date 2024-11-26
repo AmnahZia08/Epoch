@@ -8,15 +8,15 @@ import { ScrollRestoration } from 'react-router-dom'
 
 const Pricing = () => {
     return (
-        <>
-            <PageHeader pageName={"Pricing"} />
-            <PricingComponent prentClass="ptb-100" />
-            <Blogs />
-            <Brands />
-            <InstagramGallery />
-            <ScrollRestoration/>
-        </>
-    )
+      <>
+        <PageHeader title={'Pricing'} />
+        <PricingComponent parentClass='ptb-100' />
+        <Blogs />
+        <Brands />
+        <InstagramGallery />
+        <ScrollRestoration />
+      </>
+    );
 }
 
 export default Pricing

@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { strings } from '../../locales';
+import { Link } from 'react-router-dom';
 
 const QuerySection = () => {
   const {
@@ -21,7 +22,9 @@ const QuerySection = () => {
               placeholder='Enter Your Email'
               aria-label='Email'
             />
-            <button className='btn btn-primary pt-3 pb-3'>{getStarted}</button>
+            <Link className='btn btn-primary'>
+              <span class='btn-text'>{getStarted}</span>
+            </Link>
           </div>
         </div>
         <h1 className='query-section-logo'>

@@ -3,6 +3,7 @@ import brand_1 from '../assets/img/brand1.png';
 import brand_2 from '../assets/img/brand2.png';
 import brand_3 from '../assets/img/brand3.png';
 import Marquee from 'react-fast-marquee';
+
 const brandsData = [
   {
     id: 1,

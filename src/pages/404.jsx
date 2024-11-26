@@ -6,7 +6,7 @@ import { Link, ScrollRestoration } from 'react-router-dom';
 const NotFound = () => {
   return (
     <>
-      <PageHeader pageName={'404 Error Page'} />
+      <PageHeader title={'404 Error Page'} />
       <div className='not-found-area ptb-100'>
         <div className='container'>
           <div className='row justify-content-center'>
