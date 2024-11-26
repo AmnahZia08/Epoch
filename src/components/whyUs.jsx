@@ -1,43 +1,56 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const features = [
+  {
+    title: 'Cutting-Edge AI Technology',
+    description:
+      'Using AI and machine learning, we offer precise, timely insights tailored to your business needs.',
+    image: 'path/to/image1.png',
+    link: 'link/to/more/details1',
+  },
+  {
+    title: 'Cutting-Edge AI Technology',
+    description:
+      'Using AI and machine learning, we offer precise, timely insights tailored to your business needs.',
+    image: 'path/to/image2.png',
+    link: 'link/to/more/details2',
+  },
+  {
+    title: 'Cutting-Edge AI Technology',
+    description:
+      'Using AI and machine learning, we offer precise, timely insights tailored to your business needs.',
+    image: 'path/to/image3.png',
+    link: 'link/to/more/details3',
+  },
+];
 
 const WhyUs = () => {
   return (
-    <section className='about-area ptb-100'>
+    <div className='reasons-area ptb-100'>
       <div className='container'>
-        <div className='section-title-center'>
-          <h2>Why Choose Us</h2>
-        </div>
-        <div className='row'>
-          <div className='col-lg-4'>
-            <div className='content'>
-              <h3>Expertise</h3>
+        <motion.div
+          className='position-relative'
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          viewport={{ once: true }}
+        >
+          <div className='heading-area d-flex justify-content-between'>
+            <h2 className='col-lg-6'>Why Should You Choose Us</h2>
+            <div className='col-lg-5'>
+              <p className='colored-text'>Human Expertise, AI Efficiency</p>
               <p>
-                Our team comprises experienced ERP developers with extensive
-                knowledge of Odoo and ERPNext.
+                Our approach to custom-model development is rooted in
+                understanding that no two businesses are alike. We take the time
+                to understand your specific challenges, operational workflows,
+                and business goals to create models that integrate seamlessly
+                with your existing systems.
               </p>
             </div>
           </div>
-          <div className='col-lg-4'>
-            <div className='content'>
-              <h3>Customized Solutions</h3>
-              <p>
-                We tailor our ERP solutions to meet the specific needs of your
-                business, ensuring maximum impact.
-              </p>
-            </div>
-          </div>
-          <div className='col-lg-4'>
-            <div className='content'>
-              <h3>Client Satisfaction</h3>
-              <p>
-                We prioritize client satisfaction and strive to deliver
-                solutions that exceed expectations.
-              </p>
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

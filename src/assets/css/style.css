@@ -3392,21 +3392,24 @@ Contact Section CSS
 }
 
 /* strategies-area */
+.reasons-area h2,
 .strategies-area h2 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 52px;
   font-weight: 700;
 }
+.reasons-area p,
 .strategies-area p {
   font-size: 20px;
   color: var(--white_color);
   margin-left: auto;
 }
+.reasons-area .heading-area,
 .strategies-area .heading-area {
   flex-direction: row;
 }
 .feature-card {
-  background-color: #0C1E3F;
+  background-color: #0c1e3f;
   padding: 23px 22px;
   border-radius: 15px;
   display: flex;
@@ -3427,7 +3430,7 @@ Contact Section CSS
 }
 
 .feature-card-icon i {
-   color: var(--white_color);
+  color: var(--white_color);
   font-size: 18px;
 }
 
@@ -3443,4 +3446,9 @@ Contact Section CSS
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
+}
+.colored-text {
+  color: #9000ff !important;
+  font-weight: 700;
+  margin-bottom: 0px;
 }
