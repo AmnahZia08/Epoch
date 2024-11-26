@@ -6,9 +6,9 @@ const PageHeader = ({ title, desc, subRoute = '' }) => {
   const { pathname } = useLocation();
 
   return (
-    <div className='container section-banner d-flex flex-column justify-content-center align-items-center text-center'>
+    <div className='container section-banner d-flex flex-column justify-content-center align-items-center text-center ptb-100'>
       {!!subRoute ? (
-        <div className='banner-area no-background'>
+        <div className='banner-area no-background pt-0'>
           <span className='banner-top-title'>{subRoute}</span>
         </div>
       ) : null}

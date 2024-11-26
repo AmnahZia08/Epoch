@@ -9,12 +9,14 @@ import TechnologiesAndTools from '../components/technologiesAndTools';
 import ContactUs from '../components/contactUs';
 import SupportImage from '../assets/img/ongoing-support.png';
 import { ScrollRestoration } from 'react-router-dom';
+import Video from '../components/video';
 
 const SupportAndOptimization = () => {
   const { subRoute } = strings.SupportAndOptimization;
   return (
     <>
       <PageHeader subRoute={subRoute} />
+      <Video url='https://www.youtube.com/watch?v=JLnycPtolfw' />
       <Services />
       <About heading={subRoute} image={SupportImage} />
       <Brands />

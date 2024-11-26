@@ -1517,10 +1517,7 @@ Banner Area CSS
 }
 
 .section-banner {
-  padding-top: 20rem;
-  padding-bottom: 14rem;
-  margin: auto;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-banner h1 {
