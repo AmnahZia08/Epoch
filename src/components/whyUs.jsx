@@ -26,7 +26,7 @@ const features = [
 
 const WhyUs = () => {
   return (
-    <div className='reasons-area ptb-100 position-relative'>
+    <div className='reasons-area ptb-100 position-relative overflow-hidden'>
       <div className='section-gradient section-gradient-right' />
       <div
         className='section-gradient section-gradient-left'

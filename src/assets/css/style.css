@@ -3498,12 +3498,12 @@ Contact Section CSS
 .moving-gradient {
   position: absolute;
   top: -250px;
-  left: 0; 
+  left: 0;
   width: 500px;
   height: 500px;
-  background-image: linear-gradient(.20turn, #00D9FF, 10%, #9000FF);
+  background-image: linear-gradient(0.2turn, #00d9ff, 10%, #9000ff);
   filter: blur(123.8px);
-  border-radius: 50%; 
+  border-radius: 50%;
   transform-origin: center;
   z-index: -1;
   background-size: 200% 200%;
@@ -3512,29 +3512,36 @@ Contact Section CSS
 
 @keyframes move-gradient-across {
   0% {
-    transform: translateX(0); 
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw - 500px)); 
+    transform: translateX(calc(100vw - 500px));
   }
 }
 
-.section-gradient{
+.section-gradient {
   position: absolute;
   width: 400px;
   height: 400px;
-  background-image: linear-gradient(.45turn,#3700FF 20%, #FF0099, 40%, #FF0099);
+  background-image: linear-gradient(
+    0.45turn,
+    #3700ff 20%,
+    #ff0099,
+    40%,
+    #ff0099
+  );
   filter: blur(115.8px);
-  border-radius: 50%; 
+  border-radius: 50%;
   transform-origin: center;
   z-index: -1;
-   transform: rotate(40.33deg);
+  transform: rotate(40.33deg);
   background-size: 200% 200%;
 }
-.section-gradient-left{
-  left: -250px; 
+.section-gradient-left {
+  left: -250px;
 }
-.section-gradient-right{
-  right: -250px; 
-   transform: scaleX(-1)
+.section-gradient-right {
+  right: -250px;
+  transform: scaleX(-1);
+  overflow: hidden;
 }
