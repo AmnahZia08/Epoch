@@ -19,8 +19,8 @@ const Banner = () => {
                 solutions. Enhance efficiency, drive innovation, and stay ahead
                 of the competition.
               </p>
-              <div className='cta'>
-                <Link to='/about' className='btn btn-primary me-2'>
+              <div>
+                <Link to='/about' className='btn btn-primary me-2 mb-2'>
                   <span className='btn-text'>Find More</span>
                 </Link>
                 <Link to='/contact' className='btn btn-secondary'>

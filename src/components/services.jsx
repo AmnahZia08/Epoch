@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const servicesData = [
@@ -55,17 +55,24 @@ const Services = () => {
         >
           <div className='row'>
             {servicesData.map((service, index) => (
-              <div className='col-lg-4 col-md-6 mb-4' key={index}>
+              <div className='col-md-6 mb-4' key={index}>
                 <div
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   className={`single-services-box p-4 ${hoveredIndex === index ? 'gradient-border' : ''}`}
                 >
+                  {!index ? (
+                    <div className='banner-area no-background pt-0'>
+                      <span className='banner-top-title'>What we offer</span>
+                    </div>
+                  ) : null}
                   <h3 className='mb-3 mt-2'>{service.title}</h3>
                   <p>{service.description}</p>
-                  <NavLink to={service.link} className='btn btn-primary'>
-                    <span className='btn-text'>Learn More</span>
-                  </NavLink>
+                  <div>
+                    <Link to={service.link} className='btn btn-primary'>
+                      <span className='btn-text'>Learn More</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

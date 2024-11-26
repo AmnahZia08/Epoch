@@ -191,9 +191,9 @@ const Testimonial = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            {clientImages.map((img, id) => {
+            {clientImages.map((img, index) => {
               return (
-                <div key={id} className='user'>
+                <div key={index} className='user'>
                   <img src={img} alt='image' />
                 </div>
               );

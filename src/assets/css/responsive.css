@@ -119,6 +119,7 @@
   }
   /* services area */
   .services-area .single-services-box h3 {
+     font-size: 20px;
     width: 100%;
   }
   .services-area .single-services-box p {
@@ -511,6 +512,10 @@
   .feature-card {
   min-width: 255px;
 }
+.btn {
+  padding: 6px;
+  font-size: 15px;
+}
 }
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -586,6 +591,7 @@
   }
   /* services area */
   .services-area .single-services-box h3 {
+     font-size: 20px;
     width: 100%;
   }
   .services-area .single-services-box p {

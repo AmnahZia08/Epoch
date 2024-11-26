@@ -1546,6 +1546,10 @@ services Area CSS
 .services-area .single-services-box {
   border-radius: 30px;
   background: linear-gradient(90deg, #e101ff26 0%, #7f01ff26 100%);
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .services-area .row .col-lg-4:first-child .single-services-box,
 .services-area .row .col-md-6:first-child .single-services-box {
@@ -3377,7 +3381,6 @@ Contact Section CSS
     100% 100%,
     0 100%;
   background-image: linear-gradient(#e101ff, #7f01ff);
-  animation: bgRotate 4s linear infinite;
 }
 
 .gradient-border::after {
@@ -3390,12 +3393,6 @@ Contact Section CSS
   height: calc(100% - 2px);
   border-radius: 30px;
   background: linear-gradient(180deg, #1a063b 0%, #4710a1 100%);
-}
-
-@keyframes bgRotate {
-  100% {
-    transform: rotate(1turn);
-  }
 }
 
 /* strategies-area */
