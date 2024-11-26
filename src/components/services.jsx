@@ -59,7 +59,7 @@ const Services = ({ data }) => {
                 <div
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  className={`single-services-box p-4 ${hoveredIndex === index ? 'gradient-border' : ''}`}
+                  className={`single-services-box p-4 ${hoveredIndex === index ? 'gradient-border' : ''} ${!data ? 'fixed-height' : ''}`}
                 >
                   {!index ? (
                     <div className='banner-area no-background pt-0'>
