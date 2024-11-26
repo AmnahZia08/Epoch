@@ -11,7 +11,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <div className='stats-area ptb-100 position-relative overflow-x-hidden'>
+    <div className='stats-area ptb-100 position-relative'>
       <div
         className='section-gradient section-gradient-right'
         style={{ bottom: '100px' }}

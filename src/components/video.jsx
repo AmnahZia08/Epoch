@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Video = ({ url }) => {
   return (
-    <div className='ptb-100 d-flex justify-content-center position-relative overflow-x-hidden'>
+    <div className='ptb-100 d-flex justify-content-center position-relative'>
       <div
         className='section-gradient section-gradient-right'
         style={{ bottom: '20px' }}

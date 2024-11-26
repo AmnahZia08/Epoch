@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 
 const Strategies = () => {
   return (
-    <div className='strategies-area ptb-100 position-relative overflow-x-hidden'>
+    <div className='strategies-area ptb-100 position-relative'>
       <div
         className='section-gradient section-gradient-right'
         style={{ bottom: '20px' }}

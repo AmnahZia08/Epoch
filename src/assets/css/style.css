@@ -3484,17 +3484,6 @@ Contact Section CSS
   margin: auto;
 }
 
-/* .section-container:hover .arrow-btn::after {
-  content: '';
-  position: absolute;
-  color: white;
-  background-color: red;
-}
-
-.section-container:hover .icon-image {
-  transform: scale(2);
-} */
-
 .moving-gradient {
   position: absolute;
   top: -250px;
@@ -3540,6 +3529,7 @@ Contact Section CSS
 .section-gradient-left {
   left: -250px;
 }
+
 .section-gradient-right {
   right: -250px;
   transform: scaleX(-1);
@@ -3572,4 +3562,3 @@ Contact Section CSS
   right: 0;
   z-index: 0;
 }
-
