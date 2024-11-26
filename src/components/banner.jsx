@@ -3,7 +3,7 @@ import man from '../assets/img/mannnnn.png';
 import { Link } from 'react-router-dom';
 const Banner = () => {
   return (
-    <div className='banner-area'>
+    <div className='banner-area ptb-100 vh-100'>
       <div className='container-fluid'>
         <div className='row align-items-center g-0'>
           <div className='col-lg-6'>
@@ -20,10 +20,10 @@ const Banner = () => {
                 of the competition.
               </p>
               <div>
-                <Link to='/about-us' className='btn btn-primary me-2'>
-                  Find More
+                <Link to='/about' className='btn btn-primary me-2 mb-2'>
+                  <span className='btn-text'>Find More</span>
                 </Link>
-                <Link to='/book-appointment' className='btn btn-secondary'>
+                <Link to='/contact' className='btn btn-secondary mb-2'>
                   Get Started
                 </Link>
               </div>

@@ -15,7 +15,7 @@ const QuerySection = () => {
         <div className='query-section-content'>
           <h6 className='query-section-title'>{querySection.title}</h6>
           <p className='query-section-desc'>{querySection.desc}</p>
-          <div className='d-flex align-items-start mt-5 gap-2'>
+          <div className='d-flex align-items-center justify-content-center mt-5 gap-2'>
             <input
               type='email'
               className='form-control query-section-input'
@@ -23,7 +23,7 @@ const QuerySection = () => {
               aria-label='Email'
             />
             <Link className='btn btn-primary'>
-              <span class='btn-text'>{getStarted}</span>
+              <span className='btn-text'>{getStarted}</span>
             </Link>
           </div>
         </div>

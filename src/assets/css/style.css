@@ -128,10 +128,6 @@ Default Button Style
   position: relative;
 }
 
-.default-btn:hover {
-  background-position: right center;
-}
-
 .default-btn i {
   position: absolute;
   right: 25px;
@@ -1404,7 +1400,10 @@ Banner Area CSS
 }
 
 .banner-area .content p {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   margin-bottom: 40px;
+  color: var(--white_color);
 }
 
 .banner-area .image {
@@ -1521,10 +1520,7 @@ Banner Area CSS
 }
 
 .section-banner {
-  padding-top: 20rem;
-  padding-bottom: 14rem;
-  margin: auto;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-banner h1 {
@@ -1550,6 +1546,10 @@ services Area CSS
 .services-area .single-services-box {
   border-radius: 30px;
   background: linear-gradient(90deg, #e101ff26 0%, #7f01ff26 100%);
+  height: 420px;
+}
+.services-area .fixed-height {
+  height: 350px;
 }
 .services-area .row .col-lg-4:first-child .single-services-box,
 .services-area .row .col-md-6:first-child .single-services-box {
@@ -1564,7 +1564,7 @@ services Area CSS
 .services-area .single-services-box h3 {
   font-size: 42px;
   font-weight: 700;
-  width: 50%;
+  width: 85%;
   color: var(--white_color);
   position: relative;
 }
@@ -1622,6 +1622,11 @@ Team Area CSS
   position: relative;
   display: flex;
   justify-content: center;
+}
+.team-area .image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team-area .image-item::before {
@@ -1704,22 +1709,29 @@ Team Area CSS
   overflow-x: clip; */
 }
 
-.team-area .navigation {
-  margin-top: 10px;
+.testimonial-section .ri-arrow-left-line {
   position: absolute;
+  left: -42px;
   top: 40%;
-  left: -75px;
-  z-index: 100;
-  transition: var(--transition);
+}
+.testimonial-section .ri-arrow-right-line {
+  position: absolute;
+  right: -42px;
+  top: 40%;
 }
 
-.team-area .ri-arrow-right-line,
-.team-area .ri-arrow-left-line {
+.testimonial-section .ri-arrow-right-line,
+.testimonial-section .ri-arrow-left-line {
   font-size: 26px;
   padding: 10px;
   background-color: #953bf521;
-  border-radius: 100px;
+  border-radius: 100%;
   color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*================================================
@@ -1768,10 +1780,6 @@ About Area CSS
   font-size: 52px;
   font-weight: 700;
   margin-bottom: 20px;
-}
-
-.about-area .content p {
-  margin-bottom: 30px;
 }
 
 .about-area .sub-content {
@@ -2005,13 +2013,13 @@ Testimonial Area CSS
 }
 
 .testimonial-area .user:nth-child(4) {
-  top: 75%;
+  top: 58%;
   right: 14%;
   animation: movebounce 5s linear infinite;
 }
 
 .testimonial-area .user:nth-child(5) {
-  top: 85%;
+  top: 70%;
   left: 18%;
   animation: movebounce 3s linear infinite;
 }
@@ -2241,6 +2249,12 @@ Blog Area CSS
   overflow: hidden;
   display: block;
   cursor: pointer;
+  height: 550px;
+}
+.article-area .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .article-area .item:before {
@@ -2668,7 +2682,7 @@ Contact Area CSS
 }
 
 .form-control {
-  height: 60px;
+  padding: 12px;
   padding-left: 15px;
   border-radius: 0px;
   color: var(--white_color);
@@ -3171,6 +3185,7 @@ Contact Section CSS
   border-radius: 100px;
   min-width: 160px;
   border: none;
+  padding: 12px;
 }
 
 .btn-primary {
@@ -3178,7 +3193,6 @@ Contact Section CSS
   display: inline-flex;
   align-items: center;
   overflow: hidden;
-  padding: 12px;
   justify-content: center;
   background-color: var(--main_color);
 }
@@ -3217,9 +3231,6 @@ Contact Section CSS
 }
 
 .btn-secondary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #6c757d;
   background-image: none;
 }
@@ -3366,7 +3377,6 @@ Contact Section CSS
     100% 100%,
     0 100%;
   background-image: linear-gradient(#e101ff, #7f01ff);
-  animation: bgRotate 4s linear infinite;
 }
 
 .gradient-border::after {
@@ -3381,8 +3391,185 @@ Contact Section CSS
   background: linear-gradient(180deg, #1a063b 0%, #4710a1 100%);
 }
 
-@keyframes bgRotate {
+/* strategies-area */
+.reasons-area h2,
+.strategies-area h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+}
+.reasons-area p,
+.strategies-area p {
+  font-size: 20px;
+  color: var(--white_color);
+  margin-left: auto;
+}
+.reasons-area .heading-area,
+.strategies-area .heading-area {
+  flex-direction: row;
+}
+.feature-card {
+  background-color: #0c1e3f;
+  padding: 23px 22px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 412px;
+}
+
+.feature-card-icon {
+  background-image: linear-gradient(to right, #e101ff, #7f01ff);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.feature-card-icon i {
+  color: var(--white_color);
+  font-size: 18px;
+}
+
+.feature-card-title {
+  color: var(--white_color);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.feature-card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* why us */
+.colored-text {
+  color: #9000ff !important;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.icon-image {
+  width: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  color: white;
+  position: relative;
+  margin: auto;
+}
+
+/* .section-container:hover .arrow-btn::after {
+  content: '';
+  position: absolute;
+  color: white;
+  background-color: red;
+}
+
+.section-container:hover .icon-image {
+  transform: scale(2);
+} */
+
+.moving-gradient {
+  position: absolute;
+  top: -250px;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background-image: linear-gradient(0.2turn, #00d9ff, 10%, #9000ff);
+  filter: blur(123.8px);
+  border-radius: 50%;
+  transform-origin: center;
+  z-index: -1;
+  background-size: 200% 200%;
+  animation: move-gradient-across 15s linear infinite alternate;
+}
+
+@keyframes move-gradient-across {
+  0% {
+    transform: translateX(0);
+  }
   100% {
-    transform: rotate(1turn);
+    transform: translateX(calc(100vw - 500px));
   }
 }
+
+.section-gradient {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(
+    0.45turn,
+    #3700ff 20%,
+    #ff0099,
+    40%,
+    #ff0099
+  );
+  filter: blur(115.8px);
+  border-radius: 50%;
+  transform-origin: center;
+  z-index: -1;
+  transform: rotate(40.33deg);
+  background-size: 200% 200%;
+}
+.section-gradient-left {
+  left: -250px;
+}
+.section-gradient-right {
+  right: -250px;
+  transform: scaleX(-1);
+}
+
+.outer_circle {
+  position: relative;
+  width: 100%;
+  right:0;
+  height: 200px;
+  border-radius: 50%;
+  background: #000;
+  overflow: hidden; 
+  z-index: 1; 
+    filter: blur(20.8px);
+  
+}
+
+.inner_circle {
+  background-image: linear-gradient(
+    to right,
+ #5700FF80 0%,
+  #2F00FF80  100%
+  );
+  content: '';
+  position: absolute;
+  top: 40%; 
+  height: 400%; 
+  left: 0; 
+  right: 0;
+  z-index: 0;
+}
+

@@ -44,7 +44,7 @@ const ContactUs = () => {
               </div>
               <div className=''>
                 <button type='submit' className='btn btn-primary'>
-                  <span class='btn-text'>Send Message</span>
+                  <span className='btn-text'>Send Message</span>
                 </button>
               </div>
             </div>

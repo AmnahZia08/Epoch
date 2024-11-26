@@ -6,8 +6,13 @@ import 'swiper/css';
 import client_1 from '../assets/img/client-1.png';
 import client_2 from '../assets/img/client-2.png';
 import client_3 from '../assets/img/client-3.png';
+import client_4 from '../assets/img/client-4.png';
+import client_5 from '../assets/img/client-5.png';
+import client_6 from '../assets/img/client-6.png';
+import client_7 from '../assets/img/client-7.png';
 import TestimonialCard from './common/testimonialCard';
 import TeamComponent from './teamComponent';
+import { motion } from 'framer-motion';
 
 const testimonialData = [
   {
@@ -116,6 +121,8 @@ const testimonialData = [
   },
 ];
 
+const clientImages = [client_4, client_5, client_6, client_7];
+
 const Testimonial = () => {
   const swiperRefs = {
     testimonial: useRef(),
@@ -134,6 +141,11 @@ const Testimonial = () => {
 
   return (
     <div className='testimonial-section ptb-100'>
+      <div className='position-relative' style={{ bottom: '-600px' }}>
+        <div className='outer_circle'>
+          <div className='inner_circle' />
+        </div>
+      </div>
       <div className='container'>
         <div className='banner-area no-background text-center pt-0'>
           <span className='banner-top-title'>Testimonials</span>
@@ -147,7 +159,6 @@ const Testimonial = () => {
           data={testimonialData}
           swiperRef={swiperRefs.team}
         />
-
         <div className='d-flex align-items-center justify-content-between navigation mt-3'>
           <div onClick={handleSlidePrev}>
             <i className='ri-arrow-left-line' />
@@ -156,8 +167,7 @@ const Testimonial = () => {
             <i className='ri-arrow-right-line' />
           </div>
         </div>
-
-        <div className='testimonial-area ptb-100'>
+        <div className='testimonial-area pb-100'>
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
@@ -167,9 +177,10 @@ const Testimonial = () => {
             }}
             className='image-courser'
             modules={[Navigation]}
+            noSwipingClass='no-swipe'
           >
             {testimonialData.map(({ id, position, rating, review, name }) => (
-              <SwiperSlide key={id}>
+              <SwiperSlide key={id} className='no-swipe'>
                 <TestimonialCard
                   position={position}
                   name={name}
@@ -179,9 +190,9 @@ const Testimonial = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          {testimonialData.map(({ id, img }) => {
+          {clientImages.map((img, index) => {
             return (
-              <div key={id} className='user'>
+              <div key={index} className='user'>
                 <img src={img} alt='image' />
               </div>
             );

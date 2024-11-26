@@ -8,6 +8,8 @@ import About from '../components/about';
 import CustomModelImage from '../assets/img/custom-model.png';
 import ContactUs from '../components/contactUs';
 import WhyUs from '../components/whyUs';
+import { ScrollRestoration } from 'react-router-dom';
+import Video from '../components/video';
 
 const MLModelDevelopment = () => {
   const {
@@ -16,12 +18,14 @@ const MLModelDevelopment = () => {
   return (
     <>
       <PageHeader subRoute={subRoute} />
+      <Video url='https://www.youtube.com/watch?v=JLnycPtolfw' />
       <Services />
       <About heading={subRoute} image={CustomModelImage} />
       <Brands />
       <TechnologiesAndTools />
       <WhyUs />
       <ContactUs />
+      <ScrollRestoration />
     </>
   );
 };

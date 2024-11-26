@@ -26,6 +26,11 @@ const TechnologiesAndTools = () => {
 
   return (
     <div className='tech-section ptb-100'>
+      <div className='position-relative' style={{ top: '400px', zIndex: 0 }}>
+        <div className='outer_circle'>
+          <div className='inner_circle' />
+        </div>
+      </div>
       <div className='container'>
         <h2 className='text-center pb-5'>Technologies and Tools</h2>
 
@@ -33,7 +38,7 @@ const TechnologiesAndTools = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className='col-lg-3 col-md-6 box__bg gradient-border text-center d-flex flex-column align-items-center p-4'
+              className='col-lg-3 col-md-6 box__bg gradient-border text-center d-flex flex-column align-items-center p-4 justify-content-start'
             >
               <h4 className='mb-5 mt-2'>{tech.label}</h4>
               <p>{tech.description}</p>
