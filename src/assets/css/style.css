@@ -1782,10 +1782,6 @@ About Area CSS
   margin-bottom: 20px;
 }
 
-.about-area .content p {
-  margin-bottom: 30px;
-}
-
 .about-area .sub-content {
   font-size: var(--font-size);
   position: relative;

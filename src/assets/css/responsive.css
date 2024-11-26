@@ -151,6 +151,7 @@
   }
   .about-area .content p {
     font-size: 16px;
+      margin-bottom: 30px;
   }
   /* gallery area */
   .gallery-area {
@@ -634,6 +635,8 @@
   }
   .about-area .content p {
     font-size: 16px;
+  margin-bottom: 30px;
+}
   }
   /* gallery area */
   .gallery-area {

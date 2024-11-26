@@ -40,7 +40,7 @@ const TechnologiesAndTools = () => {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className='col-lg-3 col-md-6 box__bg text-center d-flex flex-column align-items-center p-4 justify-content-start'
+                className='col-lg-3 col-md-6 box__bg gradient-border text-center d-flex flex-column align-items-center p-4 justify-content-start'
               >
                 <h4 className='mb-5 mt-2'>{tech.label}</h4>
                 <p>{tech.description}</p>
