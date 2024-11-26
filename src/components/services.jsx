@@ -7,41 +7,41 @@ const servicesData = [
     title: 'Identify The Issue',
     description:
       'Business consulting powered by precise AI insights, bringing better decisions and bigger results.',
-    link: '/identify-the-issue',
+    link: '/',
   },
   {
     title: 'Develop A Prototype',
     description:
       'Tailored AI models designed to meet your specific business needs, ensuring optimal performance and results.',
-    link: '/develop-a-prototype',
+    link: '/',
   },
   {
     title: 'Develop The Application',
     description:
       'Tailored AI models designed to meet your specific business needs, ensuring optimal performance and results.',
-    link: '/develop-the-application',
+    link: '/',
   },
   {
     title: 'Test Through Simulation',
     description:
       'Comprehensive ERP systems developed to streamline your operations and improve overall business management.',
-    link: '/test-through-simulation',
+    link: '/',
   },
   {
     title: 'Launch (Go-Live)',
     description:
       'Continuous support and optimization services to ensure your AI solutions remain effective and up-to-date.',
-    link: '/launch-go-live',
+    link: '/',
   },
   {
     title: 'Support And Optimize',
     description:
       'Advanced software solutions powered by AI, designed to enhance efficiency, drive innovation, and provide a competitive edge.',
-    link: '/support-and-optimize',
+    link: '/',
   },
 ];
 
-const Services = () => {
+const Services = ({ data }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -54,8 +54,8 @@ const Services = () => {
           viewport={{ once: true }}
         >
           <div className='row'>
-            {servicesData.map((service, index) => (
-              <div className='col-md-6 mb-4' key={index}>
+            {(data || servicesData).map((service, index) => (
+              <div className='col-12 col-md-6 col-xl-4 mb-4' key={index}>
                 <div
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
@@ -68,11 +68,13 @@ const Services = () => {
                   ) : null}
                   <h3 className='mb-3 mt-2'>{service.title}</h3>
                   <p>{service.description}</p>
-                  <div>
-                    <Link to={service.link} className='btn btn-primary'>
-                      <span className='btn-text'>Learn More</span>
-                    </Link>
-                  </div>
+                  {service?.link ? (
+                    <div>
+                      <Link to={service.link} className='btn btn-primary'>
+                        <span className='btn-text'>Learn More</span>
+                      </Link>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             ))}

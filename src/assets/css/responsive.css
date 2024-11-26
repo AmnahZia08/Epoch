@@ -117,7 +117,14 @@
   .banner-area .image {
     padding-top: 30px;
   }
+  
   /* services area */
+  .services-area .single-services-box  {
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
   .services-area .single-services-box h3 {
      font-size: 20px;
     width: 100%;
@@ -590,6 +597,9 @@
     left: -87%;
   }
   /* services area */
+    .services-area .single-services-box  {
+      height: 270px;
+  }
   .services-area .single-services-box h3 {
      font-size: 20px;
     width: 100%;
