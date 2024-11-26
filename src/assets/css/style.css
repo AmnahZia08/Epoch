@@ -3538,27 +3538,22 @@ Contact Section CSS
 .outer_circle {
   position: relative;
   width: 100%;
-  right:0;
+  right: 0;
   height: 200px;
   border-radius: 50%;
   background: #000;
-  overflow: hidden; 
-  z-index: 1; 
-    filter: blur(20.8px);
-  
+  overflow: hidden;
+  z-index: 1;
+  filter: blur(20.8px);
 }
 
 .inner_circle {
-  background-image: linear-gradient(
-    to right,
- #5700FF80 0%,
-  #2F00FF80  100%
-  );
+  background-image: linear-gradient(to right, #5700ff80 0%, #2f00ff80 100%);
   content: '';
   position: absolute;
-  top: 40%; 
-  height: 400%; 
-  left: 0; 
+  top: 40%;
+  height: 400%;
+  left: 0;
   right: 0;
   z-index: 0;
 }

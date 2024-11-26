@@ -141,7 +141,7 @@ const Testimonial = () => {
 
   return (
     <div className='testimonial-section ptb-100'>
-      <div className='position-relative'>
+      <div className='position-relative' style={{ top: '600px', zIndex: 0 }}>
         <div className='outer_circle'>
           <div className='inner_circle' />
         </div>

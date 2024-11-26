@@ -67,8 +67,7 @@
   }
   /* banner area */
   .banner-area {
-    padding-top: 80px;
-    height: 100vh;
+    padding-top: 100px;
   }
   .banner-area span.banner-top-title {
     font-size: 14px;
@@ -584,7 +583,6 @@
   /* banner area */
   .banner-area {
     padding-top: 50px;
-    height: 100vh;
   }
   .banner-area .content {
     padding-top: 60px;
@@ -832,7 +830,11 @@
   .section-container .description {
     font-size: 17px;
   }
-}
+
+  .reasons-area .heading-area,
+  .strategies-area .heading-area {
+    flex-direction: column;
+  }}
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .container-fluid {
