@@ -27,6 +27,11 @@ const TechnologiesAndTools = () => {
 
   return (
     <div className='tech-section ptb-100'>
+      <div className='position-relative' style={{ top: '400px', zIndex: 0 }}>
+        <div className='outer_circle'>
+          <div className='inner_circle' />
+        </div>
+      </div>
       <div className='container'>
         <motion.div
           className='position-relative'

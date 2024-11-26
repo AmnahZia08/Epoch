@@ -45,6 +45,11 @@ const Home = () => {
   return (
     <>
       <Banner />
+      <div className='position-relative' style={{ top: '200px', zIndex: 0 }}>
+        <div className='outer_circle'>
+          <div className='inner_circle' />
+        </div>
+      </div>
       <About
         direction='ltr'
         showButton

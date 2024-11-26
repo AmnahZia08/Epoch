@@ -539,6 +539,8 @@
   .section-container .description {
     font-size: 17px;
   }
+
+  .outer_circle,
   .section-gradient,
   .moving-gradient {
     display: none;
@@ -820,7 +822,7 @@
       transform: translateX(calc(100vw - 200px));
     }
   }
-
+  .outer_circle,
   .section-gradient {
     display: none;
   }
