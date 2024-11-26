@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { strings } from '../locales';
 import AboutCard from '../assets/img/about-card.png';
@@ -14,6 +14,7 @@ const About = ({
   showGradient,
 }) => {
   const staticText = strings.offer;
+  const { pathname } = useLocation();
 
   const flexDirectionStyle = {
     flexDirection: direction === 'rtl' ? 'row-reverse' : 'row',
@@ -21,7 +22,7 @@ const About = ({
 
   return (
     <div className='about-area ptb-100 position-relative'>
-      {showGradient ? (
+      {pathname === '/about' ? (
         <div
           className='section-gradient section-gradient-left'
           style={{ bottom: '100px' }}

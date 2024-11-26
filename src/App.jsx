@@ -51,6 +51,7 @@ const Home = () => {
         heading={imageCard.heading}
         subHeading={imageCard.subHeading}
         description={imageCard.desc}
+        showGradient={true}
       />
       <Services data={services} />
       <Brands />
