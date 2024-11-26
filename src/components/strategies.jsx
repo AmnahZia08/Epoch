@@ -17,7 +17,7 @@ const Strategies = () => {
           whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           viewport={{ once: true }}
         >
-          <div className='heading-area d-flex justify-content-between'>
+          <div className='heading-area d-flex justify-content-between mb-4'>
             <h2 className='grd-color-1 col-lg-6'>
               AI-Powered Strategies for Modern Business
             </h2>

@@ -67,7 +67,8 @@
   }
   /* banner area */
   .banner-area {
-    padding-top: 100px;
+    padding-top: 80px;
+    height: 100vh;
   }
   .banner-area span.banner-top-title {
     font-size: 14px;
@@ -113,9 +114,6 @@
   .banner-area .searchbox .btn {
     padding: 10px 15px;
     font-size: 16px;
-  }
-  .banner-area .image {
-    padding-top: 30px;
   }
 
   /* services area */
@@ -586,6 +584,7 @@
   /* banner area */
   .banner-area {
     padding-top: 50px;
+    height: 100vh;
   }
   .banner-area .content {
     padding-top: 60px;
@@ -612,9 +611,6 @@
   .banner-area .searchbox .form-control {
     padding: 20px 10px;
     font-size: 16px;
-  }
-  .banner-area .image {
-    padding-top: 30px;
   }
   .banner-area .scroll-down {
     left: -87%;
