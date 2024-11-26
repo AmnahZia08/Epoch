@@ -96,6 +96,7 @@ const Header = () => {
 
   return (
     <>
+      <div className='moving-gradient'></div>
       <nav className='navbar navbar-expand-lg mb-nav' id='navbar'>
         <div className='container-fluid'>
           <div

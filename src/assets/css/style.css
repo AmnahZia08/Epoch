@@ -3495,3 +3495,27 @@ Contact Section CSS
 .section-container:hover .icon-image {
   transform: scale(2);
 } */
+
+.moving-gradient {
+  position: absolute;
+  top: -250px;
+  left: 0; 
+  width: 500px;
+  height: 500px;
+  background-image: linear-gradient(.20turn, #00D9FF, 10%, #9000FF);
+  filter: blur(101.8px);
+  border-radius: 50%; 
+  transform-origin: center;
+  z-index: -1;
+  background-size: 200% 200%;
+  animation: move-gradient-across 15s linear infinite alternate;
+}
+
+@keyframes move-gradient-across {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(calc(100vw - 500px)); 
+  }
+}
