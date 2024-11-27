@@ -42,24 +42,11 @@ const BlogsComponent = () => {
                 <Swiper
                   spaceBetween={30}
                   breakpoints={{
-                    0: {
-                      slidesPerView: 1,
-                    },
-                    576: {
-                      slidesPerView: 1,
-                    },
-                    768: {
-                      slidesPerView: 2,
-                    },
-                    992: {
-                      slidesPerView: 1,
-                    },
-                    1200: {
-                      slidesPerView: 2,
-                    },
-                    1920: {
-                      slidesPerView: 3,
-                    },
+                    0: { slidesPerView: 1 },
+                    576: { slidesPerView: 2 },
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 2 },
+                    1200: { slidesPerView: 3 },
                   }}
                   pagination={pagination}
                   modules={[Pagination]}

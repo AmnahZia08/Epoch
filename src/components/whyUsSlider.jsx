@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 const WhyUsSlider = ({ data }) => {
   const swiperRef = useRef();
 
@@ -10,7 +11,7 @@ const WhyUsSlider = ({ data }) => {
   };
 
   const style =
-    window.innerWidth > 768 ? { gridTemplateColumns: 'auto 1fr 2fr 50px' } : {};
+    window.innerWidth > 768 ? { gridTemplateColumns: '1fr 1fr 2fr 1fr' } : {};
 
   return (
     <Swiper
@@ -29,11 +30,11 @@ const WhyUsSlider = ({ data }) => {
             className='section-container gap-4 d-grid align-items-center'
             style={style}
           >
-            <img src={image} alt={title} className='icon-image' />
+            <div className='image-wrapper'>
+              <img src={image} alt={title} className='icon-image' />
+            </div>
             <h3 className='title'>{title}</h3>
-
             <p className='description'>{description}</p>
-
             <button
               className='rounded-circle arrow-btn'
               onClick={handleSlideNext}
