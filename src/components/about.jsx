@@ -28,7 +28,9 @@ const About = ({
           style={{ bottom: '100px' }}
         />
       ) : null}
-      <div className='container'>
+      <div
+        className={`${direction === 'ltr' ? 'container' : 'container-fluid'}`}
+      >
         <motion.div
           className='row align-items-center'
           initial={{

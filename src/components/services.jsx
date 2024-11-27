@@ -66,7 +66,9 @@ const Services = ({ data }) => {
                       <span className='banner-top-title'>What we offer</span>
                     </div>
                   ) : null}
-                  <h3 className='mb-3 mt-2'>{service.title}</h3>
+                  <h3 className={`mb-3 mt-2 ${!data ? 'w-75' : ''}`}>
+                    {service.title}
+                  </h3>
                   <p>{service.description}</p>
                   {service?.link ? (
                     <div>

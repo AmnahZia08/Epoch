@@ -1519,7 +1519,8 @@ Banner Area CSS
 }
 
 .section-banner {
-  min-height: 100vh;
+  margin-top: 100px;
+  min-height: 800px;
 }
 
 .section-banner h1 {
@@ -1548,7 +1549,7 @@ services Area CSS
   height: 311px;
 }
 .services-area .fixed-height {
-  height: 350px;
+  height: 311px;
 }
 .services-area .row .col-lg-4:first-child .single-services-box,
 .services-area .row .col-md-6:first-child .single-services-box {
@@ -3356,9 +3357,8 @@ Contact Section CSS
 }
 
 .box__bg {
-  height: '329px';
-  width: 100%;
-  max-width: 300px;
+  height: 329px;
+  width: 412px;
 }
 
 .gradient-border {
