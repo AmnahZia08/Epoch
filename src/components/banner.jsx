@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
   return (
     <div className='banner-area overflow-hidden vh-100'>
-      <div className='container-fluid'>
-        <div className='row align-items-center g-0'>
+      <div className='container-fluid h-100 d-flex'>
+        <div className='row align-items-center g-0' style={{ margin: 'auto' }}>
           <div className='col-lg-6'>
             <div className='content'>
               <span className='banner-top-title'>
@@ -30,7 +30,7 @@ const Banner = () => {
             </div>
           </div>
           <div className='col-lg-6'>
-            <div className='image'>
+            <div className='globe-image'>
               <img src={man} alt='image' />
             </div>
           </div>

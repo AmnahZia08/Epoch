@@ -1203,7 +1203,7 @@ Blog Details CSS
   height: 115px;
   border-radius: 5px 5px 0 0;
   background-color: var(--mainColor);
-  background-image: url(../../assets/img/bg.jpg);
+  background-image: url(../../assets/img/bg.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1350,11 +1350,10 @@ blockquote::after,
 Banner Area CSS
 =================================================*/
 .banner-area {
-  background-image: url(../img/bg.jpg);
+  background-image: url(../img/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 100px;
   padding-bottom: 0px;
   position: relative;
 }
@@ -1405,8 +1404,10 @@ Banner Area CSS
   font-size: 20px;
 }
 
-.banner-area .image {
+.banner-area .globe-image {
   text-align: end;
+  max-width: 776px;
+  max-height: 703px;
 }
 
 .banner-area .scroll-down {
