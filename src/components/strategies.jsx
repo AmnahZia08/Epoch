@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import ReactPlayer from 'react-player';
 import { ReactSVG } from 'react-svg';
 import PlayIcon from '../assets/svg/play.svg';
+import VideoPlaceholder from '../assets/img/video-placeholder-1.png';
 
 const Strategies = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -35,17 +36,15 @@ const Strategies = () => {
             </p>
           </div>
         </div>
-        <div className='position-relative mx-auto'>
-          <ReactPlayer
-            url='https://www.youtube.com/watch?v=JLnycPtolfw'
-            controls={true}
-            playing={isPlaying}
-            volume={0.8}
-            width='100%'
-            height={'642px'}
-          />
-
-          {!isPlaying && (
+        <ReactPlayer
+          url='https://www.youtube.com/watch?v=JLnycPtolfw'
+          controls={true}
+          playing={isPlaying}
+          volume={0.8}
+          width='100%'
+          height={'642px'}
+          light={<img src={VideoPlaceholder} alt='Thumbnail' />}
+          playIcon={
             <div
               onClick={handlePlayClick}
               className='position-absolute top-50 start-50 translate-middle'
@@ -53,8 +52,8 @@ const Strategies = () => {
             >
               <ReactSVG src={PlayIcon} />
             </div>
-          )}
-        </div>
+          }
+        />
 
         <FeatureCardRow />
       </motion.div>

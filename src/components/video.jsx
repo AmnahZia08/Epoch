@@ -3,8 +3,9 @@ import ReactPlayer from 'react-player';
 import { motion } from 'framer-motion';
 import { ReactSVG } from 'react-svg';
 import PlayIcon from '../assets/svg/play.svg';
+import PlaceholderImage from '../assets/img/video-placeholder-2.png';
 
-const Video = ({ url }) => {
+const Video = ({ url, placeholder }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayClick = () => {
@@ -21,17 +22,20 @@ const Video = ({ url }) => {
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
         viewport={{ once: true }}
       >
-        <div className='position-relative mx-auto'>
-          <ReactPlayer
-            url={url}
-            controls={true}
-            playing={isPlaying}
-            volume={0.8}
-            width='90vw'
-            height={'585px'}
-          />
-
-          {!isPlaying && (
+        <ReactPlayer
+          url={url}
+          controls={true}
+          playing={isPlaying}
+          volume={0.8}
+          width='90vw'
+          height={'585px'}
+          light={
+            <img
+              src={placeholder ? placeholder : PlaceholderImage}
+              alt='Thumbnail'
+            />
+          }
+          playIcon={
             <div
               onClick={handlePlayClick}
               className='position-absolute top-50 start-50 translate-middle'
@@ -39,8 +43,8 @@ const Video = ({ url }) => {
             >
               <ReactSVG src={PlayIcon} />
             </div>
-          )}
-        </div>
+          }
+        />
       </motion.div>
     </div>
   );
