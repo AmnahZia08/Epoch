@@ -473,8 +473,8 @@
     font-size: 25px;
   }
   .section-banner {
-  margin-top: 40px;
-  min-height: 500px;
+    margin-top: 40px;
+    min-height: 500px;
   }
 
   .section-banner h1 {
@@ -508,8 +508,8 @@
   }
   .box__bg {
     width: 300px;
-  height: 180;
-}
+    height: 280px;
+  }
   /* strategies-area */
   .reasons-area h2,
   .strategies-area h2 {
@@ -607,16 +607,20 @@
   .banner-area {
     padding-top: 50px;
   }
+  .banner-area .globe {
+    display: flex;
+    justify-content: center;
+  }
   .banner-area .content {
     padding-top: 60px;
     padding-left: 0;
     padding-right: 12px;
     text-align: center;
   }
-    .banner-area .globe-image {
-  max-width: 376px;
-  max-height: 303px;
-}
+  .banner-area .globe-image {
+    max-width: 376px;
+    max-height: 303px;
+  }
   .banner-area .popular-tag {
     justify-content: center;
   }
@@ -866,11 +870,13 @@
   .strategies-area .heading-area {
     flex-direction: column;
   }
-    .section-banner {
-  margin-top: 40px;
-  min-height: 500px;
+  .section-banner {
+    margin-top: 40px;
+    min-height: 500px;
   }
-}
+  .box__bg {
+    height: 200px;
+  }}
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .container-fluid {
@@ -913,6 +919,9 @@
   .testimonial-section .ri-arrow-left-line {
     font-size: 20px;
   }
+  .services-area .single-services-box {
+    height: 400px;
+  }
 }
 /* Min width 1750px */
 @media only screen and (min-width: 1750px) {
@@ -924,5 +933,11 @@
     max-width: 1920px;
     padding-left: 100px;
     padding-right: 100px;
+  }
+}
+
+@media only screen and (min-width: 1199px) and (max-width: 1559px) {
+    .services-area .single-services-box {
+    height: 410px;
   }
 }

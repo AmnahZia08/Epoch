@@ -1549,9 +1549,7 @@ services Area CSS
   background: linear-gradient(90deg, #e101ff26 0%, #7f01ff26 100%);
   height: 311px;
 }
-.services-area .fixed-height {
-  height: 311px;
-}
+
 .services-area .row .col-lg-4:first-child .single-services-box,
 .services-area .row .col-md-6:first-child .single-services-box {
   background: none;

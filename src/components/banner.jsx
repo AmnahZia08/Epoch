@@ -29,7 +29,7 @@ const Banner = () => {
               </div>
             </div>
           </div>
-          <div className='col-lg-6'>
+          <div className='col-lg-6 globe'>
             <div className='globe-image'>
               <img src={man} alt='image' />
             </div>
