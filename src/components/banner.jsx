@@ -20,7 +20,10 @@ const Banner = () => {
                 of the competition.
               </p>
               <div>
-                <Link to='/about' className='btn btn-primary me-2 mb-2'>
+                <Link
+                  to='/custom-model-development'
+                  className='btn btn-primary me-2 mb-2'
+                >
                   <span className='btn-text'>Find More</span>
                 </Link>
                 <Link to='/contact' className='btn btn-secondary mb-2'>

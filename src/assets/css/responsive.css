@@ -533,6 +533,7 @@
   .btn {
     padding: 6px;
     font-size: 15px;
+    cursor: pointer;
   }
   .section-container {
     display: flex;

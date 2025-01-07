@@ -47,6 +47,7 @@ const Home = () => {
     <>
       <Banner />
       <GradientContainer
+        zIndex={-100}
         position={'-350px'}
         component={
           <About

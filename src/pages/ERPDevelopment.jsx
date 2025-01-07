@@ -16,7 +16,7 @@ const ERPDevelopment = () => {
   return (
     <>
       <PageHeader subRoute={subRoute} />
-      <Video url='https://www.youtube.com/watch?v=JLnycPtolfw' />
+      {/* <Video url='https://www.youtube.com/watch?v=JLnycPtolfw' /> */}
       <Services />
       <About heading={subRoute} image={ERPDevelopmentImage} />
       <Brands />

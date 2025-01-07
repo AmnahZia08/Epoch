@@ -16,7 +16,7 @@ const AIPoweredSoftware = () => {
   return (
     <>
       <PageHeader subRoute={subRoute} title={title} />
-      <Video url='https://www.youtube.com/watch?v=JLnycPtolfw' />
+      {/* <Video url='https://www.youtube.com/watch?v=JLnycPtolfw' /> */}
       <Services />
       <About heading={offersHeading} image={AISoftwareImage} />
       <Brands />

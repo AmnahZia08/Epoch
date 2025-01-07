@@ -50,11 +50,14 @@ const LegalAndLinks = () => {
                   <li>
                     <Link to='/about'>About Us</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to='/pricing'>Pricing</Link>
                   </li>
                   <li>
                     <Link to='/blog'>Blog</Link>
+                  </li> */}
+                  <li>
+                    <Link to='/custom-model-development'>Services</Link>
                   </li>
                   <li>
                     <Link to='/contact'>Contact Us</Link>
@@ -66,18 +69,18 @@ const LegalAndLinks = () => {
               <div className='single-footer-widget'>
                 <h3>Legal</h3>
                 <ul className='links-list'>
-                  <li>
+                  {/* <li>
                     <Link to='/contact'>Legal</Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link to='/terms-conditions'>Terms of Use</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to='/terms-conditions'>Terms & Conditions</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to='/contact'>Payment Method</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to='/privacy-policy'>Privacy Policy</Link>
                   </li>

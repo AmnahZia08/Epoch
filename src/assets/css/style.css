@@ -1550,7 +1550,7 @@ services Area CSS
   height: 311px;
 }
 
-.services-area .row .col-lg-4:first-child .single-services-box,
+/* .services-area .row .col-lg-4:first-child .single-services-box,
 .services-area .row .col-md-6:first-child .single-services-box {
   background: none;
 }
@@ -1558,7 +1558,7 @@ services Area CSS
 .services-area .row .col-lg-4:last-child .single-services-box,
 .services-area .row .col-md-6:last-child .single-services-box {
   background: none;
-}
+} */
 
 .services-area .single-services-box h3 {
   font-size: 42px;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const GradientContainer = ({ component, position }) => {
+const GradientContainer = ({ component, position, zIndex = 0 }) => {
   return (
-    <div className='position-relative w-100 h-100 ptb-100'>
+    <div className='position-relative w-100 h-100 ptb-100' style={{ zIndex }}>
       <div
         className='position-absolute'
         style={{
